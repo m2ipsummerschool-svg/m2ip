@@ -1,28 +1,343 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Summer School 2026 | Home</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Summer School 2026 | Home</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="site-header">
-  <div class="brand"><div class="brand-mark">SS</div><div><strong>SUMMER SCHOOL 2026</strong><small>Centre / Department / Institution Name</small></div></div>
-  <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav').classList.toggle('open')">☰</button>
-  <nav class="nav">
-    <a class="active" href="index.html">Home</a><a href="register.html">Register</a><a href="speakers.html">Speakers</a><a href="program.html">Program</a><a href="symposium.html">Symposium</a><a href="resources.html">Resources</a><a href="awards.html">Awards</a><a href="logistics.html">Logistics</a><a href="sponsors.html">Sponsors</a><a href="people.html">People</a>
-  </nav>
-</header>
-<main>
-  <section class="hero">
-    <div class="hero-content"><p class="eyebrow">AN INTENSIVE ACADEMIC PROGRAMME</p><h1>Summer School on<br><span>Computer Vision & AI</span></h1><p class="hero-lead">Learn from leading researchers through expert lectures, hands-on sessions and collaborative discussions.</p><div class="hero-meta"><span>📅 01–06 July 2026</span><span>📍 Institution Name, City</span></div><a class="button" href="register.html">Registration details →</a></div>
-    <div class="hero-side"><div class="date-card"><small>SUMMER SCHOOL</small><strong>2026</strong><span>LECTURES · LABS · DISCUSSION</span></div></div>
-  </section>
-  <section class="notice"><strong>Important announcement</strong><span>Registration and programme updates will be published here. Replace this message with your latest announcement.</span><a href="register.html">More information →</a></section>
-  <section class="section intro-grid"><div><p class="eyebrow">WELCOME</p><h2>About the Summer School</h2><p>Computer Vision and Artificial Intelligence are rapidly evolving fields with applications across science, engineering, healthcare and industry. This summer school brings together students, researchers and practitioners to explore foundational concepts and recent advances.</p><p>The programme combines invited lectures, demonstrations and practical sessions, creating opportunities to learn from experts and exchange ideas with fellow participants.</p></div><aside class="highlight"><h3>At a glance</h3><p><b>6 days</b><small>Lectures and hands-on sessions</small></p><p><b>Expert speakers</b><small>Researchers from academia and industry</small></p><p><b>Practical learning</b><small>Demonstrations, labs and discussions</small></p></aside></section>
-  <section class="section muted"><div class="section-heading"><p class="eyebrow">PROGRAMME OVERVIEW</p><h2>What to expect</h2></div><div class="cards three"><article class="card"><div class="card-icon">▤</div><h3>Expert Lectures</h3><p>Learn core concepts and current research directions from invited speakers.</p></article><article class="card"><div class="card-icon">⌘</div><h3>Hands-on Labs</h3><p>Translate theory into practice through guided demonstrations and lab sessions.</p></article><article class="card"><div class="card-icon">◎</div><h3>Research Exchange</h3><p>Discuss ideas, meet peers and build academic connections.</p></article></div></section>
-  <section class="section"><div class="section-heading"><p class="eyebrow">WHO SHOULD ATTEND</p><h2>Audience</h2></div><p class="narrow">The summer school is intended for postgraduate students, research scholars, faculty members and professionals working in computer vision, machine learning and related areas. Participants should have a basic understanding of the subject; a mathematical and programming background will be helpful.</p></section>
-  <section class="section series"><div><p class="eyebrow">OUR PREVIOUS EDITIONS</p><h2>Summer School Series</h2><p>Explore earlier editions and stay connected with the continuing summer school programme.</p></div><a class="button button-outline" href="https://cvit.iiit.ac.in/summerschoolseries/" target="_blank" rel="noopener">Explore the series ↗</a></section>
-</main>
-<footer class="footer"><div><h3>SUMMER SCHOOL 2026</h3><p>Department / Centre Name<br>Institution Name, Campus Address<br>City, State, PIN, Country</p></div><div><h4>Quick Links</h4><a href="register.html">Registration</a><a href="program.html">Programme</a><a href="speakers.html">Speakers</a></div><div><h4>Contact Us</h4><p>Email: summerschool@example.edu<br>Phone: +91 XXXXX XXXXX</p></div><div class="copyright">© 2026 Institution Name. All rights reserved.</div></footer>
-</body></html>
+
+    <!-- Header Section -->
+    <header class="site-header">
+
+        <div class="brand">
+
+            <div class="brand-mark">SS</div>
+
+            <div>
+                <strong>SUMMER SCHOOL 2026</strong>
+                <small>Centre / Department / Institution Name</small>
+            </div>
+
+        </div>
+
+        <!-- Mobile Navigation Button -->
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav').classList.toggle('open')">
+            ☰
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav class="nav">
+
+            <a class="active" href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="program.html">Program</a>
+            <a href="symposium.html">Symposium</a>
+            <a href="resources.html">Resources</a>
+            <a href="awards.html">Awards</a>
+            <a href="logistics.html">Logistics</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="people.html">People</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    AN INTENSIVE ACADEMIC PROGRAMME
+                </p>
+
+                <h1>
+                    Summer School on
+                    <br>
+                    <span>Computer Vision & AI</span>
+                </h1>
+
+                <p class="hero-lead">
+                    Learn from leading researchers through expert lectures,
+                    hands-on sessions and collaborative discussions.
+                </p>
+
+                <div class="hero-meta">
+
+                    <span>📅 01–06 July 2026</span>
+
+                    <span>📍 Institution Name, City</span>
+
+                </div>
+
+                <a class="button" href="register.html">
+                    Registration details →
+                </a>
+
+            </div>
+
+            <!-- Date Card -->
+            <div class="hero-side">
+
+                <div class="date-card">
+
+                    <small>SUMMER SCHOOL</small>
+
+                    <strong>2026</strong>
+
+                    <span>LECTURES · LABS · DISCUSSION</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Announcement Section -->
+        <section class="notice">
+
+            <strong>Important announcement</strong>
+
+            <span>
+                Registration and programme updates will be published here.
+                Replace this message with your latest announcement.
+            </span>
+
+            <a href="register.html">
+                More information →
+            </a>
+
+        </section>
+
+
+        <!-- About Summer School Section -->
+        <section class="section intro-grid">
+
+            <div>
+
+                <p class="eyebrow">WELCOME</p>
+
+                <h2>About the Summer School</h2>
+
+                <p>
+                    Computer Vision and Artificial Intelligence are rapidly
+                    evolving fields with applications across science,
+                    engineering, healthcare and industry. This summer school
+                    brings together students, researchers and practitioners
+                    to explore foundational concepts and recent advances.
+                </p>
+
+                <p>
+                    The programme combines invited lectures, demonstrations
+                    and practical sessions, creating opportunities to learn
+                    from experts and exchange ideas with fellow participants.
+                </p>
+
+            </div>
+
+            <!-- At a Glance Section -->
+            <aside class="highlight">
+
+                <h3>At a glance</h3>
+
+                <p>
+                    <b>6 days</b>
+                    <small>Lectures and hands-on sessions</small>
+                </p>
+
+                <p>
+                    <b>Expert speakers</b>
+                    <small>Researchers from academia and industry</small>
+                </p>
+
+                <p>
+                    <b>Practical learning</b>
+                    <small>Demonstrations, labs and discussions</small>
+                </p>
+
+            </aside>
+
+        </section>
+
+
+        <!-- Programme Overview Section -->
+        <section class="section muted">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">PROGRAMME OVERVIEW</p>
+
+                <h2>What to expect</h2>
+
+            </div>
+
+            <div class="cards three">
+
+                <!-- Expert Lectures -->
+                <article class="card">
+
+                    <div class="card-icon">▤</div>
+
+                    <h3>Expert Lectures</h3>
+
+                    <p>
+                        Learn core concepts and current research directions
+                        from invited speakers.
+                    </p>
+
+                </article>
+
+                <!-- Hands-on Labs -->
+                <article class="card">
+
+                    <div class="card-icon">⌘</div>
+
+                    <h3>Hands-on Labs</h3>
+
+                    <p>
+                        Translate theory into practice through guided
+                        demonstrations and lab sessions.
+                    </p>
+
+                </article>
+
+                <!-- Research Exchange -->
+                <article class="card">
+
+                    <div class="card-icon">◎</div>
+
+                    <h3>Research Exchange</h3>
+
+                    <p>
+                        Discuss ideas, meet peers and build academic
+                        connections.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- Target Audience Section -->
+        <section class="section">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">WHO SHOULD ATTEND</p>
+
+                <h2>Audience</h2>
+
+            </div>
+
+            <p class="narrow">
+                The summer school is intended for postgraduate students,
+                research scholars, faculty members and professionals working
+                in computer vision, machine learning and related areas.
+                Participants should have a basic understanding of the subject;
+                a mathematical and programming background will be helpful.
+            </p>
+
+        </section>
+
+
+        <!-- Previous Editions Section -->
+        <section class="section series">
+
+            <div>
+
+                <p class="eyebrow">OUR PREVIOUS EDITIONS</p>
+
+                <h2>Summer School Series</h2>
+
+                <p>
+                    Explore earlier editions and stay connected with the
+                    continuing summer school programme.
+                </p>
+
+            </div>
+
+            <a class="button button-outline"
+               href="https://cvit.iiit.ac.in/summerschoolseries/"
+               target="_blank"
+               rel="noopener">
+
+                Explore the series ↗
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+
+        <!-- Institution Details -->
+        <div>
+
+            <h3>SUMMER SCHOOL 2026</h3>
+
+            <p>
+                Department / Centre Name
+                <br>
+                Institution Name, Campus Address
+                <br>
+                City, State, PIN, Country
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="register.html">Registration</a>
+            <a href="program.html">Programme</a>
+            <a href="speakers.html">Speakers</a>
+
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+
+            <h4>Contact Us</h4>
+
+            <p>
+                Email: summerschool@example.edu
+                <br>
+                Phone: +91 XXXXX XXXXX
+            </p>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+
+            © 2026 Institution Name. All rights reserved.
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
