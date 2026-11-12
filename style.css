@@ -5,3 +5,25 @@
 @media(max-width:1050px){.site-header{align-items:flex-start}.nav{gap:10px}.nav a{font-size:11px}.hero{padding-top:60px;padding-bottom:60px}}
 @media(max-width:780px){.site-header{align-items:center}.menu-toggle{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 25px;box-shadow:0 10px 20px #10243a18;flex-direction:column;align-items:flex-start}.nav.open{display:flex}.hero{grid-template-columns:1fr;padding:55px 26px}.hero-side{display:none}.notice{align-items:flex-start;flex-direction:column;gap:6px}.notice a{margin-left:0}.intro-grid{grid-template-columns:1fr;gap:25px}.cards.three{grid-template-columns:1fr}.section{padding:48px 26px}.series{align-items:flex-start;flex-direction:column}.footer{grid-template-columns:1fr 1fr}.copyright{grid-column:1/-1}.page-title{padding:40px 26px}.page-title h1{font-size:32px}.content-section{padding:35px 22px 55px}.sponsor-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.brand strong{font-size:12px}.brand small{font-size:10px}.footer{grid-template-columns:1fr}.copyright{grid-column:auto}.hero h1{font-size:38px}.hero-meta{flex-direction:column;gap:8px}}
+/* Brand Logo Container */
+.brand-mark {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 8px;
+}
+
+/* Brand Logo Image */
+.brand-mark img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
