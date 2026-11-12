@@ -746,3 +746,30 @@
 .map-section {
     margin-top: 25px;
 }
+/* Venue Information */
+.venue-info {
+    background: #f3f7f8;
+    padding: 22px 25px;
+    margin-bottom: 30px;
+    border-left: 4px solid #2b9a91;
+    border-radius: 5px;
+}
+
+.venue-info h3 {
+    color: #10243a;
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.venue-info p {
+    color: #536779;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.venue-info strong {
+    color: #176b87;
+}
