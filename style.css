@@ -6,24 +6,200 @@
 @media(max-width:780px){.site-header{align-items:center}.menu-toggle{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 25px;box-shadow:0 10px 20px #10243a18;flex-direction:column;align-items:flex-start}.nav.open{display:flex}.hero{grid-template-columns:1fr;padding:55px 26px}.hero-side{display:none}.notice{align-items:flex-start;flex-direction:column;gap:6px}.notice a{margin-left:0}.intro-grid{grid-template-columns:1fr;gap:25px}.cards.three{grid-template-columns:1fr}.section{padding:48px 26px}.series{align-items:flex-start;flex-direction:column}.footer{grid-template-columns:1fr 1fr}.copyright{grid-column:1/-1}.page-title{padding:40px 26px}.page-title h1{font-size:32px}.content-section{padding:35px 22px 55px}.sponsor-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.brand strong{font-size:12px}.brand small{font-size:10px}.footer{grid-template-columns:1fr}.copyright{grid-column:auto}.hero h1{font-size:38px}.hero-meta{flex-direction:column;gap:8px}}
 /* Brand Logo Container */
-.brand-mark {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-    overflow: hidden;
+/* ========================================
+   HEADER SECTION
+======================================== */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Top Header Layout */
+
+.header-top {
+    width: 100%;
+    min-height: 95px;
+    padding: 12px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* VIT Logo */
+
+.vit-logo {
+    width: 90px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+}
+
+.vit-logo img {
+    max-width: 85px;
+    max-height: 65px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Summer School Details */
+
+.brand {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.brand strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #102a43;
+    letter-spacing: 1px;
+}
+
+.brand small {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* M2IP Logo */
+
+.m2ip-logo {
+    width: 100px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.m2ip-logo img {
+    max-width: 95px;
+    max-height: 70px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ========================================
+   NAVIGATION BAR
+======================================== */
+
+.nav {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    border-radius: 8px;
+    gap: 30px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    box-sizing: border-box;
 }
 
-/* Brand Logo Image */
-.brand-mark img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
+.nav a {
+    text-decoration: none;
+    color: #18334d;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #159e9a;
+}
+
+/* Mobile Navigation Button */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    color: #18334d;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+    .header-top {
+        min-height: 80px;
+        padding: 10px 4%;
+    }
+
+    .vit-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .vit-logo img {
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .brand {
+        padding-left: 10px;
+    }
+
+    .brand strong {
+        font-size: 14px;
+    }
+
+    .brand small {
+        font-size: 10px;
+    }
+
+    .m2ip-logo {
+        width: 65px;
+        height: 55px;
+    }
+
+    .m2ip-logo img {
+        max-width: 65px;
+        max-height: 55px;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        margin: 5px 15px;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0 20px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 12px 0;
+        border-bottom: 1px solid #eeeeee;
+    }
+
 }
