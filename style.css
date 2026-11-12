@@ -233,15 +233,19 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Member Photographs */
+
+/* Member Photographs - Full Image Without Cropping */
 
 .committee-photo {
-    width: 160px;
-    height: 180px;
-    object-fit: cover;
-    object-position: center top;
+    display: block;
+    width: 185px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin: 0 auto 16px;
+    background-color: #ffffff;
 }
 
 /* Member Names */
