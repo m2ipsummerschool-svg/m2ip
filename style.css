@@ -205,3 +205,71 @@
     }
 
 }
+/* Committee Grid */
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Single Member */
+
+.committee-grid.single {
+    grid-template-columns: 1fr;
+}
+
+/* Committee Cards */
+
+.committee-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Member Photographs */
+
+.committee-photo {
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Member Names */
+
+.committee-card h3 {
+    color: #19336d;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* Member Designations */
+
+.committee-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 900px) {
+    .committee-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+}
