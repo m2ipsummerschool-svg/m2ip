@@ -336,3 +336,142 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   HOW TO REACH - LOGISTICS PAGE
+========================================= */
+
+/* Main How to Reach section */
+.content-section .container.my-5 {
+    max-width: 1120px;
+    width: 100%;
+    margin: 45px auto !important;
+    padding: 0 25px;
+}
+
+/* Section heading */
+.content-section .section-title {
+    color: #10243a;
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    border-left: 4px solid #176b87;
+    padding-left: 14px;
+    margin-bottom: 40px;
+}
+
+/* Travel information rows */
+.content-section .container.my-5 .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -15px 55px;
+}
+
+/* Reverse image and text for alternate rows */
+.content-section .container.my-5 .flex-md-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Text and image columns */
+.content-section .container.my-5 .col-md-6 {
+    width: 50%;
+    padding: 0 15px;
+}
+
+/* Travel headings */
+.content-section .container.my-5 h3 {
+    color: #10243a;
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Paragraphs */
+.content-section .container.my-5 p {
+    color: #536779;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* Travel information list */
+.content-section .container.my-5 .list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+}
+
+.content-section .container.my-5 .list-unstyled li {
+    color: #536779;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* Travel icons */
+.content-section .info-icon {
+    color: #176b87;
+    font-size: 19px;
+    margin-right: 8px;
+}
+
+/* Route links */
+.content-section .container.my-5 a {
+    color: #176b87;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.content-section .container.my-5 a:hover {
+    color: #2b9a91;
+    text-decoration: underline;
+}
+
+/* Travel photographs */
+.content-section .container.my-5 img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(16, 36, 58, 0.12);
+}
+
+/* Responsive tablet layout */
+@media (max-width: 768px) {
+    .content-section .container.my-5 .col-md-6 {
+        width: 100%;
+    }
+
+    .content-section .container.my-5 .row,
+    .content-section .container.my-5 .flex-md-row-reverse {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .content-section .container.my-5 img {
+        height: 260px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    .content-section .container.my-5 {
+        padding: 0 15px;
+    }
+
+    .content-section .section-title {
+        font-size: 25px;
+    }
+
+    .content-section .container.my-5 h3 {
+        font-size: 20px;
+    }
+
+    .content-section .container.my-5 img {
+        height: 220px;
+    }
+}
