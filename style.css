@@ -475,3 +475,17 @@
         height: 220px;
     }
 }
+.enquiry-contact {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background: #f3f7f8;
+    border-left: 4px solid #176b87;
+    color: #253648;
+    font-size: 15px;
+}
+
+.enquiry-contact a {
+    color: #176b87;
+    font-weight: 700;
+    text-decoration: none;
+}
