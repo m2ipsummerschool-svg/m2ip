@@ -489,3 +489,257 @@
     font-weight: 700;
     text-decoration: none;
 }
+
+/* =========================================
+   ACCOMMODATION PAGE
+========================================= */
+
+.accommodation-section {
+    width: 100%;
+    padding: 55px 25px 75px;
+    background: #ffffff;
+}
+
+.accommodation-container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+/* Main heading */
+
+.accommodation-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #10243a;
+    border-left: 4px solid #2b9a91;
+    padding-left: 15px;
+    margin: 0 0 18px;
+}
+
+.accommodation-intro {
+    max-width: 850px;
+    color: #68798a;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 42px;
+}
+
+/* Accommodation category */
+
+.accommodation-category {
+    margin-bottom: 48px;
+}
+
+.accommodation-category-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.accommodation-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #eef7f6;
+    color: #176b87;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.accommodation-category-heading h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    color: #10243a;
+    margin: 0;
+}
+
+.accommodation-category-heading p {
+    color: #68798a;
+    font-size: 13px;
+    margin: 3px 0 0;
+}
+
+/* Table wrapper */
+
+.accommodation-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e1e8ec;
+    border-radius: 10px;
+    box-shadow: 0 5px 18px rgba(16, 36, 58, 0.05);
+}
+
+/* Accommodation table */
+
+.accommodation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    min-width: 600px;
+    background: #ffffff;
+}
+
+.accommodation-table thead {
+    background: #10243a;
+    color: #ffffff;
+}
+
+.accommodation-table th {
+    padding: 17px 20px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: none;
+}
+
+.accommodation-table td {
+    padding: 17px 20px;
+    font-size: 14px;
+    color: #405365;
+    border-bottom: 1px solid #e8eef1;
+}
+
+.accommodation-table tbody tr:nth-child(even) {
+    background: #f5f8fa;
+}
+
+.accommodation-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.accommodation-table tbody tr:hover {
+    background: #eef7f6;
+    transition: background 0.2s ease;
+}
+
+.accommodation-table th:first-child,
+.accommodation-table td:first-child {
+    width: 90px;
+    text-align: center;
+}
+
+.accommodation-table th:last-child,
+.accommodation-table td:last-child {
+    width: 180px;
+    white-space: nowrap;
+}
+
+/* Price styling */
+
+.accommodation-table .price {
+    color: #176b87;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.accommodation-table small {
+    color: #68798a;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+/* Enquiry box */
+
+.accommodation-enquiry {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 28px;
+    background: #f3f7f8;
+    border-left: 4px solid #2b9a91;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.enquiry-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: grid;
+    place-items: center;
+    background: #10243a;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.enquiry-content h3 {
+    font-family: 'Manrope', sans-serif;
+    color: #10243a;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 0 6px;
+}
+
+.enquiry-content p {
+    color: #68798a;
+    font-size: 14px;
+    margin: 0 0 7px;
+}
+
+.enquiry-content strong {
+    color: #253648;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.enquiry-content a {
+    color: #176b87;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.enquiry-content a:hover {
+    color: #2b9a91;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+
+    .accommodation-section {
+        padding: 35px 16px 50px;
+    }
+
+    .accommodation-title {
+        font-size: 25px;
+    }
+
+    .accommodation-category-heading h3 {
+        font-size: 18px;
+    }
+
+    .accommodation-table th,
+    .accommodation-table td {
+        padding: 13px 14px;
+        font-size: 13px;
+    }
+
+    .accommodation-enquiry {
+        align-items: flex-start;
+        padding: 20px 16px;
+        gap: 13px;
+    }
+
+    .enquiry-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 18px;
+    }
+
+    .enquiry-content strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
