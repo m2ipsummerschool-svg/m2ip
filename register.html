@@ -1,150 +1,325 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registration | Summer School 2026</title>
+
+    <title>Registration | M2IP Summer School 2027</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Header Section -->
-<header class="site-header">
+    <header class="site-header">
 
-    <!-- Top Header -->
-    <div class="header-top">
+        <div class="header-top">
 
-        <!-- VIT Logo - Left Side -->
-        <div class="vit-logo">
-            <img src="blue-vit-logo.png"
-                 alt="VIT Chennai Logo">
+            <!-- VIT Logo -->
+            <div class="vit-logo">
+                <img src="VIT Logo.png" alt="VIT Chennai Logo">
+            </div>
+
+            <!-- Summer School Details -->
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <!-- M2IP Logo -->
+            <div class="m2ip-logo">
+                <img src="M2IP Logo.png" alt="M2IP Logo">
+            </div>
+
         </div>
 
-        <!-- Summer School Details - Centre -->
-        <div class="brand">
-            <strong>SUMMER SCHOOL 2027</strong>
-            <small>SAS / Department of Mathematics / VIT Chennai</small>
-        </div>
+        <!-- Mobile Navigation -->
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+                onclick="
+                    const nav = document.querySelector('.nav');
+                    const isOpen = nav.classList.toggle('open');
+                    this.setAttribute('aria-expanded', isOpen);
+                ">
+            ☰
+        </button>
 
-        <!-- M2IP Logo - Right Side -->
-        <div class="m2ip-logo">
-            <img src="M2IP Logo.png"
-                 alt="M2IP Logo">
-        </div>
+        <!-- Navigation Menu -->
+        <nav class="nav" id="main-navigation">
 
-    </div>
+            <a href="index.html">Home</a>
+            <a class="active" href="register.html">Register</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="program.html">Program</a>
+            <a href="symposium.html">Symposium</a>
+            <a href="resources.html">Resources</a>
+            <a href="awards.html">Awards</a>
+            <a href="logistics.html">Logistics</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="people.html">People</a>
 
-    <!-- Mobile Navigation Button -->
-    <button class="menu-toggle"
-            aria-label="Toggle navigation"
-            onclick="document.querySelector('.nav').classList.toggle('open')">
-        ☰
-    </button>
+        </nav>
 
-    <!-- Navigation Bar -->
-    <nav class="nav">
-
-        <a class="active" href="index.html">Home</a>
-        <a href="register.html">Register</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="program.html">Program</a>
-        <a href="symposium.html">Symposium</a>
-        <a href="resources.html">Resources</a>
-        <a href="awards.html">Awards</a>
-        <a href="logistics.html">Logistics</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="people.html">People</a>
-
-    </nav>
-
-</header>
+    </header>
 
 
+    <!-- Main Content -->
     <main class="inner">
 
+        <!-- Page Title -->
         <div class="page-title">
-            <p class="eyebrow">SUMMER SCHOOL 2026</p>
+
+            <p class="eyebrow">M2IP 2027</p>
+
             <h1>Registration</h1>
-            <p>Replace the sample information below with confirmed event details.</p>
-        </div>
-
-        <section class="content-section">
-
-            <h2>Registration Details</h2>
 
             <p>
-                Registration categories, fee structure and deadlines are provided
-                below as an editable template.
+                Summer School on Mathematical Methods in Image Processing
+                10–20 May 2027 | VIT Chennai
             </p>
 
-            <h3>Registration Fee</h3>
+        </div>
+
+
+        <!-- Eligibility Section -->
+        <section class="content-section">
+
+            <h2>Who Can Apply?</h2>
+
+            <ul>
+                <li>
+                    Postgraduate students, research scholars,
+                    postdoctoral researchers and early-career faculty
+                    in mathematics or related disciplines.
+                </li>
+
+                <li>
+                    Applicants should have basic knowledge of
+                    linear algebra, calculus, and probability,
+                    and be able to write simple Python/MATLAB programs.
+                </li>
+
+                <li>
+                    Prior research experience in image processing
+                    is not required.
+                </li>
+
+                <li>
+                    Participants must commit to the full school,
+                    team assignments, and the 30-day project follow-up.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- Selection Process -->
+        <section class="content-section">
+
+            <h2>How Will Candidates Be Selected?</h2>
+
+            <ul>
+                <li>
+                    Selection will be based on academic merit and
+                    a statement of interest of 150–200 words,
+                    outlining your academic background, research
+                    interests, reasons for attending, and expected benefits.
+                </li>
+
+                <li>
+                    Preference will be given to postgraduate students,
+                    research scholars, and early-career researchers
+                    below 35 years of age.
+                </li>
+
+                <li>
+                    Among equally suitable applicants, preference will
+                    be given to those with limited access to similar
+                    training, considering institutional and
+                    geographical diversity.
+                </li>
+
+                <li>
+                    <strong>40 participants</strong> will be selected,
+                    with a reserve list maintained to fill vacant seats.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- Important Dates -->
+        <section class="content-section">
+
+            <h2>Important Dates</h2>
 
             <div class="table-wrap">
+
                 <table>
+
                     <thead>
                         <tr>
-                            <th>Category</th>
-                            <th>Early Bird Fee</th>
-                            <th>Regular Fee</th>
-                            <th>Eligibility</th>
+                            <th>Event</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
 
                     <tbody>
+
                         <tr>
-                            <td>Student</td>
-                            <td>₹ [amount]</td>
-                            <td>₹ [amount]</td>
-                            <td>Full-time UG / PG / PhD students</td>
+                            <td>Applications Open</td>
+                            <td><strong>01 December 2026</strong></td>
                         </tr>
 
                         <tr>
-                            <td>Academic</td>
-                            <td>₹ [amount]</td>
-                            <td>₹ [amount]</td>
-                            <td>Faculty and academic researchers</td>
+                            <td>Application Deadline</td>
+                            <td><strong>30 December 2026</strong></td>
                         </tr>
 
                         <tr>
-                            <td>Industry</td>
-                            <td>₹ [amount]</td>
-                            <td>₹ [amount]</td>
-                            <td>Industry professionals</td>
+                            <td>Selection List Announced</td>
+                            <td><strong>03 January 2027</strong></td>
                         </tr>
+
+                        <tr>
+                            <td>
+                                Registration and Fee Payment Deadline
+                                for Selected Candidates
+                            </td>
+                            <td><strong>15 March 2027</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Summer School</td>
+                            <td><strong>10–20 May 2027</strong></td>
+                        </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
+        </section>
+
+
+        <!-- Registration Fee -->
+        <section class="content-section">
+
+            <h2>Registration Fee</h2>
 
             <div class="callout">
-                <b>How to register</b>
+
+                <h3>₹ 2,000 per selected participant</h3>
 
                 <p>
-                    Complete the online registration form and follow the payment
-                    instructions. Add your official registration link below.
+                    Selected candidates must confirm their participation
+                    and complete the registration fee payment
+                    by <strong>15 March 2027</strong>.
                 </p>
 
-                <a class="button" href="#"
-                    onclick="alert('Add your registration form URL to this link.');return false;">
-                    Open registration form →
-                </a>
             </div>
 
-            <h3>Important Notes</h3>
+        </section>
+
+
+        <!-- Fee Refund and Travel Support -->
+        <section class="content-section">
+
+            <h2>Fee Refund &amp; Travel Support</h2>
 
             <ul>
-                <li>Registration is confirmed only after payment verification.</li>
-                <li>Specify what the fee includes (meals, materials, lab access, etc.).</li>
-                <li>Include accommodation information and cancellation policy.</li>
-                <li>Update all fee amounts and deadlines before publishing.</li>
+
+                <li>
+                    Participants with <strong>at least 90% attendance</strong>
+                    who complete all prescribed assessments will be
+                    eligible for a fee refund,
+                    <strong>subject to funding availability</strong>.
+                </li>
+
+                <li>
+                    Travel support will be subject to funding
+                    availability, approved limits, and submission
+                    of valid travel documents.
+                </li>
+
+                <li>
+                    Refund conditions and travel support limits
+                    will be communicated to selected candidates
+                    before fee payment.
+                </li>
+
             </ul>
+
+        </section>
+
+
+        <!-- Accommodation -->
+        <section class="content-section">
+
+            <h2>Accommodation</h2>
+
+            <p>
+                Accommodation availability and applicable charges
+                will be communicated in the selection notice.
+            </p>
+
+            <p>
+                Accommodation may be provided free of charge,
+                subject to funding availability.
+            </p>
+
+        </section>
+
+
+        <!-- Application Instructions -->
+        <section class="content-section">
+
+            <h2>How to Apply?</h2>
+
+            <p>
+                Interested candidates are invited to submit their
+                applications through the official online application form.
+            </p>
+
+            <p>
+                Applicants must provide a statement of interest
+                (150–200 words) describing their academic background,
+                research interests, motivation for attending,
+                and expected benefits.
+            </p>
+
+            <div class="callout">
+
+                <h3>Applications Open on 01 December 2026</h3>
+
+                <p>
+                    The official application link will be made
+                    available here.
+                </p>
+
+                <!-- Replace # with official form URL -->
+                <a class="button"
+                   href="#"
+                   onclick="alert('The application link will be updated soon.'); return false;">
+
+                    Application Link – Coming Soon →
+
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
-    <!-- Footer Section -->
+
+ <!-- Footer Section -->
     <footer class="footer">
 
         <!-- Institution Details -->
@@ -197,9 +372,6 @@
 
     </footer>
 
-</body>
-
-</html>
 </body>
 
 </html>
