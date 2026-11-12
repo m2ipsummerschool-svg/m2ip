@@ -287,3 +287,48 @@
     font-size: 14px;
     text-align: center;
 }
+/* Centre and align all committee sections */
+.committee-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 24px;
+    box-sizing: border-box;
+}
+
+/* Committee section headings */
+.committee-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #19336d;
+}
+
+/* Centre committee cards */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+/* Keep individual cards consistent */
+.committee-card {
+    width: 100%;
+    max-width: 280px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .committee-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+}
