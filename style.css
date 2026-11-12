@@ -273,3 +273,17 @@
         grid-template-columns: 1fr;
     }
 }
+.committee-photo-placeholder {
+    width: 160px;
+    height: 180px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf0f6;
+    color: #19336d;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
