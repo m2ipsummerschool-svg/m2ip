@@ -1,62 +1,237 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Organising Committee | M2IP Summer School 2027</title>
-
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        /* Main committee section */
+        .committee-section {
+            width: min(1360px, calc(100% - 64px));
+            margin: 0 auto;
+            padding: 28px 0 42px;
+            box-sizing: border-box;
+        }
+
+        /* Section headings */
+        .committee-heading {
+            text-align: left !important;
+            color: #172b3f;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 1.25;
+            border-left: 4px solid #17366b;
+            padding-left: 12px;
+            margin: 0 0 30px;
+        }
+
+        /* General grid */
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 54px 36px;
+            justify-items: center;
+            align-items: start;
+        }
+
+        /* Profile layout - no cards */
+        .committee-card {
+            width: 100%;
+            max-width: 330px;
+            padding: 0 !important;
+            margin: 0;
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Profile images */
+        .committee-card .committee-photo {
+            display: block;
+            width: 185px;
+            height: 185px;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: center;
+            margin: 0 auto 16px;
+            border-radius: 12px;
+            box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Names */
+        .committee-card h3 {
+            color: #171717;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin: 0 0 8px;
+        }
+
+        /* Designations */
+        .committee-card p {
+            color: #171717;
+            font-size: 16px;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* Chief Patron and Convenor */
+        .committee-grid.single {
+            grid-template-columns: minmax(0, 1fr);
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        /* Patrons: 3 + 2 + 2 layout */
+        .committee-section .committee-grid.patrons-grid {
+            display: grid !important;
+            grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+            gap: 54px 24px;
+            justify-items: center;
+        }
+
+        .committee-section .committee-grid.patrons-grid .committee-card {
+            grid-column: span 2;
+        }
+
+        /* Centre rows 2 and 3 */
+        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(4),
+        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(6) {
+            grid-column: 2 / span 2;
+        }
+
+        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(5),
+        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(7) {
+            grid-column: 4 / span 2;
+        }
+
+        /* Scientific Committee: 2 + 2 */
+        .committee-section .committee-grid.scientific-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Correspondence */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px 50px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 18px;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+        }
+
+        .contact-card h3 {
+            color: #171717;
+        }
+
+        /* Organising members placeholder */
+        .committee-photo-placeholder {
+            width: 185px;
+            height: 185px;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eef2f6;
+            color: #19336d;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        /* Tablet */
+        @media (max-width: 800px) {
+            .committee-section {
+                width: min(100% - 40px, 680px);
+            }
+
+            .committee-grid,
+            .committee-section .committee-grid.patrons-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+
+            .committee-section .committee-grid.patrons-grid .committee-card {
+                grid-column: auto !important;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 540px) {
+            .committee-section {
+                width: calc(100% - 32px);
+                padding: 24px 0 32px;
+            }
+
+            .committee-heading {
+                font-size: 25px;
+                margin-bottom: 24px;
+            }
+
+            .committee-grid,
+            .committee-section .committee-grid.patrons-grid,
+            .committee-section .committee-grid.scientific-grid,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
+                gap: 38px;
+            }
+
+            .committee-section .committee-grid.patrons-grid .committee-card {
+                grid-column: auto !important;
+            }
+
+            .committee-card .committee-photo {
+                width: 170px;
+                height: 170px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ==========================================
-         HEADER SECTION
-    =========================================== -->
-
+    <!-- HEADER -->
     <header class="site-header">
 
         <div class="header-top">
 
-            <!-- VIT Logo -->
             <div class="vit-logo">
-                <img src="blue-vit-logo.png"
-                     alt="VIT Chennai Logo">
+                <img src="blue-vit-logo.png" alt="VIT Chennai Logo">
             </div>
 
-            <!-- Summer School Details -->
             <div class="brand">
                 <strong>SUMMER SCHOOL 2027</strong>
                 <small>SAS / Department of Mathematics / VIT Chennai</small>
             </div>
 
-            <!-- M2IP Logo -->
             <div class="m2ip-logo">
-                <img src="M2IP Logo.png"
-                     alt="M2IP Logo">
+                <img src="M2IP Logo.png" alt="M2IP Logo">
             </div>
 
         </div>
 
-
-        <!-- Mobile Navigation -->
         <button class="menu-toggle"
                 aria-label="Toggle navigation"
                 onclick="document.querySelector('.nav').classList.toggle('open')">
-
             ☰
-
         </button>
 
-
-        <!-- Navigation Bar -->
         <nav class="nav">
-
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
             <a href="speakers.html">Speakers</a>
@@ -67,40 +242,23 @@
             <a href="logistics.html">Logistics</a>
             <a href="sponsors.html">Sponsors</a>
             <a class="active" href="people.html">People</a>
-
         </nav>
 
     </header>
 
-
-
-    <!-- ==========================================
-         MAIN CONTENT
-    =========================================== -->
-
+    <!-- MAIN CONTENT -->
     <main class="inner">
 
-
-        <!-- Page Title - Retained Only Once -->
         <div class="page-title">
-
             <p class="eyebrow">SUMMER SCHOOL 2027</p>
-
             <h1>Organising Committee</h1>
-
             <p>
                 Meet the distinguished members of the organising,
                 advisory and scientific committees of M2IP 2027.
             </p>
-
         </div>
 
-
-
-        <!-- ======================================
-             CHIEF PATRON
-        ======================================= -->
-
+        <!-- CHIEF PATRON -->
         <section id="organizers" class="committee-section">
 
             <h2 class="committee-heading">Chief Patron</h2>
@@ -108,164 +266,84 @@
             <div class="committee-grid single">
 
                 <article class="committee-card">
-
                     <img src="viswanathan.jpg"
                          alt="Dr. G. Viswanathan"
                          class="committee-photo">
 
                     <h3>Dr. G. Viswanathan</h3>
-
-                    <p>
-                        Founder & Chancellor<br>
-                        VIT
-                    </p>
-
+                    <p>Founder &amp; Chancellor<br>VIT</p>
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             PATRONS - 3 + 2 + 2
-        ======================================= -->
-
+        <!-- PATRONS -->
         <section class="committee-section">
 
             <h2 class="committee-heading">Patrons</h2>
 
             <div class="committee-grid patrons-grid">
 
-                <!-- Patron 1 -->
                 <article class="committee-card">
-
                     <img src="vpa_small.jpg"
                          alt="Dr. Sankar Viswanathan"
                          class="committee-photo">
-
                     <h3>Dr. Sankar Viswanathan</h3>
-
-                    <p>
-                        Vice-President<br>
-                        VIT
-                    </p>
-
+                    <p>Vice-President<br>VIT</p>
                 </article>
 
-
-                <!-- Patron 2 -->
                 <article class="committee-card">
-
                     <img src="vicepresident.jpg"
                          alt="Dr. Sekar Viswanathan"
                          class="committee-photo">
-
                     <h3>Dr. Sekar Viswanathan</h3>
-
-                    <p>
-                        Vice-President<br>
-                        VIT
-                    </p>
-
+                    <p>Vice-President<br>VIT</p>
                 </article>
 
-
-                <!-- Patron 3 -->
                 <article class="committee-card">
-
                     <img src="gvs.jpg"
                          alt="Dr. G. V. Selvam"
                          class="committee-photo">
-
                     <h3>Dr. G. V. Selvam</h3>
-
-                    <p>
-                        Vice-President<br>
-                        VIT
-                    </p>
-
+                    <p>Vice-President<br>VIT</p>
                 </article>
 
-
-                <!-- Patron 4 -->
                 <article class="committee-card">
-
                     <img src="vsk.jpg"
                          alt="Dr. V. S. Kanchana Bhaaskaran"
                          class="committee-photo">
-
                     <h3>Dr. V. S. Kanchana Bhaaskaran</h3>
-
-                    <p>
-                        Vice-Chancellor<br>
-                        VIT
-                    </p>
-
+                    <p>Vice-Chancellor<br>VIT</p>
                 </article>
 
-
-                <!-- Patron 5 -->
                 <article class="committee-card">
-
                     <img src="tt.jpg"
                          alt="Dr. T. Thyagarajan"
                          class="committee-photo">
-
                     <h3>Dr. T. Thyagarajan</h3>
-
-                    <p>
-                        Pro-Vice Chancellor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Pro-Vice Chancellor<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Patron 6 -->
                 <article class="committee-card">
-
                     <img src="sn.jpg"
                          alt="Dr. K. Sathiyanarayanan"
                          class="committee-photo">
-
                     <h3>Dr. K. Sathiyanarayanan</h3>
-
-                    <p>
-                        Director<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Director<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Patron 7 -->
                 <article class="committee-card">
-
                     <img src="pkm.jpg"
                          alt="Dr. P. K. Manoharan"
                          class="committee-photo">
-
                     <h3>Dr. P. K. Manoharan</h3>
-
-                    <p>
-                        Additional Registrar<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Additional Registrar<br>VIT Chennai</p>
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             CONVENOR
-        ======================================= -->
-
+        <!-- CONVENOR -->
         <section class="committee-section">
 
             <h2 class="committee-heading">Convenor</h2>
@@ -273,96 +351,51 @@
             <div class="committee-grid single">
 
                 <article class="committee-card">
-
                     <img src="nrb.jpeg"
                          alt="Dr. N. Ramesh Babu"
                          class="committee-photo">
-
                     <h3>Dr. N. Ramesh Babu</h3>
-
-                    <p>
-                        Assistant Professor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Assistant Professor<br>VIT Chennai</p>
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             CO-CONVENORS
-        ======================================= -->
-
+        <!-- CO-CONVENORS -->
         <section class="committee-section">
 
             <h2 class="committee-heading">Co-Convenors</h2>
 
             <div class="committee-grid">
 
-                <!-- Co-Convenor 1 -->
                 <article class="committee-card">
-
                     <img src="laksh.jpg"
                          alt="Dr. S. Lakshmanan"
                          class="committee-photo">
-
                     <h3>Dr. S. Lakshmanan</h3>
-
-                    <p>
-                        Professor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Professor<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Co-Convenor 2 -->
                 <article class="committee-card">
-
                     <img src="pn.jpg"
                          alt="Dr. N. Padmaja"
                          class="committee-photo">
-
                     <h3>Dr. N. Padmaja</h3>
-
-                    <p>
-                        Assistant Professor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Assistant Professor<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Co-Convenor 3 -->
                 <article class="committee-card">
-
                     <img src="sriraman.jpg"
                          alt="Dr. R. Sriraman"
                          class="committee-photo">
-
                     <h3>Dr. R. Sriraman</h3>
-
-                    <p>
-                        Assistant Professor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Assistant Professor<br>VIT Chennai</p>
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             ORGANISING MEMBERS
-        ======================================= -->
-
+        <!-- ORGANISING MEMBERS -->
         <section class="committee-section">
 
             <h2 class="committee-heading">Organising Members</h2>
@@ -372,9 +405,7 @@
                 <article class="committee-card">
 
                     <div class="committee-photo-placeholder">
-
                         <span>Faculty Members</span>
-
                     </div>
 
                     <h3>Faculty Members and Research Scholars</h3>
@@ -388,149 +419,85 @@
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             ADVISORY COMMITTEE
-        ======================================= -->
-
+        <!-- ADVISORY COMMITTEE -->
         <section class="committee-section">
 
             <h2 class="committee-heading">Advisory Committee</h2>
 
             <div class="committee-grid">
 
-                <!-- Advisory Member 1 -->
                 <article class="committee-card">
-
                     <img src="dean.jpg"
                          alt="Dr. G. Vinitha"
                          class="committee-photo">
-
                     <h3>Dr. G. Vinitha</h3>
-
                     <p>
                         Professor and Dean<br>
                         School of Advanced Sciences (SAS)<br>
                         VIT Chennai
                     </p>
-
                 </article>
 
-
-                <!-- Advisory Member 2 -->
                 <article class="committee-card">
-
                     <img src="hod.jpg"
                          alt="Dr. A. Manivannan"
                          class="committee-photo">
-
                     <h3>Dr. A. Manivannan</h3>
-
                     <p>
                         Associate Professor and Head<br>
                         Department of Mathematics<br>
                         VIT Chennai
                     </p>
-
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             SCIENTIFIC COMMITTEE - 2 + 2
-        ======================================= -->
-
+        <!-- SCIENTIFIC COMMITTEE -->
         <section class="committee-section">
 
             <h2 class="committee-heading">Scientific Committee</h2>
 
             <div class="committee-grid scientific-grid">
 
-                <!-- Scientific Member 1 -->
                 <article class="committee-card">
-
                     <img src="mini gosh.jpeg"
                          alt="Dr. Mini Ghosh"
                          class="committee-photo">
-
                     <h3>Dr. Mini Ghosh</h3>
-
-                    <p>
-                        Professor – HAG<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Professor – HAG<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Scientific Member 2 -->
                 <article class="committee-card">
-
                     <img src="kalyani.jpeg"
                          alt="Dr. Kalyani Desikan"
                          class="committee-photo">
-
                     <h3>Dr. Kalyani Desikan</h3>
-
-                    <p>
-                        Professor – HAG<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Professor – HAG<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Scientific Member 3 -->
                 <article class="committee-card">
-
                     <img src="prabhakar.jpg"
                          alt="Dr. Prabhakar V"
                          class="committee-photo">
-
                     <h3>Dr. Prabhakar V</h3>
-
-                    <p>
-                        Professor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Professor<br>VIT Chennai</p>
                 </article>
 
-
-                <!-- Scientific Member 4 -->
                 <article class="committee-card">
-
                     <img src="kaliyappan.jpeg"
                          alt="Dr. Kaliyappan M"
                          class="committee-photo">
-
                     <h3>Dr. Kaliyappan M</h3>
-
-                    <p>
-                        Professor<br>
-                        VIT Chennai
-                    </p>
-
+                    <p>Professor<br>VIT Chennai</p>
                 </article>
 
             </div>
-
         </section>
 
-
-
-        <!-- ======================================
-             ADDRESS FOR CORRESPONDENCE
-        ======================================= -->
-
+        <!-- ADDRESS FOR CORRESPONDENCE -->
         <section class="committee-section contact-section">
 
             <h2 class="committee-heading">
@@ -539,143 +506,89 @@
 
             <div class="contact-grid">
 
-                <!-- Dr. N. Ramesh Babu -->
                 <div class="contact-card">
-
                     <h3>Dr. N. Ramesh Babu</h3>
-
                     <p>
                         Email:
                         <a href="mailto:n.rameshbabu@vit.ac.in">
                             n.rameshbabu@vit.ac.in
                         </a>
                     </p>
-
                     <p>Mobile: +91 8778097050</p>
-
                 </div>
 
-
-                <!-- Dr. Lakshmanan Shanmugam -->
                 <div class="contact-card">
-
                     <h3>Dr. Lakshmanan Shanmugam</h3>
-
                     <p>
                         Email:
                         <a href="mailto:lakshmanan.s@vit.ac.in">
                             lakshmanan.s@vit.ac.in
                         </a>
                     </p>
-
                     <p>Mobile: +91 8825493496</p>
-
                 </div>
 
-
-                <!-- Dr. N. Padmaja -->
                 <div class="contact-card">
-
                     <h3>Dr. N. Padmaja</h3>
-
                     <p>
                         Email:
                         <a href="mailto:padmaja.n@vit.ac.in">
                             padmaja.n@vit.ac.in
                         </a>
                     </p>
-
                     <p>Mobile: +91 9894848293</p>
-
                 </div>
 
-
-                <!-- Dr. R. Sriraman -->
                 <div class="contact-card">
-
                     <h3>Dr. R. Sriraman</h3>
-
                     <p>
                         Email:
                         <a href="mailto:sriraman.r@vit.ac.in">
                             sriraman.r@vit.ac.in
                         </a>
                     </p>
-
                     <p>Mobile: +91 7667676818</p>
-
                 </div>
 
             </div>
-
         </section>
-
 
     </main>
 
-
-
-    <!-- ==========================================
-         FOOTER SECTION
-    =========================================== -->
-
+    <!-- FOOTER -->
     <footer class="footer">
 
-        <!-- Institution Details -->
         <div>
-
             <h3>SUMMER SCHOOL 2027</h3>
-
             <p>
-                Department of Mathematics, School of Advanced Sciences,
-                <br>
-                VIT University, Vandalur - Kelambakkam Road,
-                <br>
-                Chennai, Tamil Nadu, 600 127,
-                <br>
+                Department of Mathematics, School of Advanced Sciences,<br>
+                VIT University, Vandalur - Kelambakkam Road,<br>
+                Chennai, Tamil Nadu, 600 127,<br>
                 India.
             </p>
-
         </div>
 
-
-        <!-- Quick Links -->
         <div>
-
             <h4>Quick Links</h4>
-
             <a href="register.html">Registration</a>
             <a href="program.html">Programme</a>
             <a href="speakers.html">Speakers</a>
-
         </div>
 
-
-        <!-- Contact Information -->
         <div>
-
             <h4>Contact Us</h4>
-
             <p>
-                Email: m2ipsummerschool@gmail.com
-                <br>
+                Email: m2ipsummerschool@gmail.com<br>
                 Phone: +91 87780 97050
             </p>
-
         </div>
 
-
-        <!-- Copyright -->
         <div class="copyright">
-
             © 2027 Vellore Institute of Technology.
             All rights reserved.
-
         </div>
 
     </footer>
 
-
 </body>
-
 </html>
