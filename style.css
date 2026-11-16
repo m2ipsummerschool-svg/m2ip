@@ -823,3 +823,95 @@
         grid-template-columns: 1fr;
     }
 }
+/* Funding and Sponsorship Layout */
+
+.sponsorship-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.4fr;
+    align-items: center;
+    gap: 45px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sponsorship-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsorship-image img {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.sponsorship-content {
+    padding: 15px 0;
+}
+
+.sponsorship-content h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--navy);
+    margin: 0 0 18px;
+}
+
+.sponsorship-content p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 0 0 20px;
+}
+
+.sponsorship-content h3 {
+    font-size: 21px;
+    color: var(--navy);
+    margin: 28px 0 12px;
+}
+
+.sponsorship-content a {
+    color: var(--blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.sponsorship-content a:hover {
+    color: var(--teal);
+    text-decoration: underline;
+}
+
+.sponsorship-content .coming-soon-label {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+
+    .sponsorship-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sponsorship-image img {
+        max-width: 300px;
+    }
+
+    .sponsorship-content {
+        text-align: center;
+    }
+
+    .sponsorship-content h2 {
+        font-size: 25px;
+    }
+
+    .sponsorship-content p {
+        font-size: 14px;
+    }
+
+}
