@@ -9,6 +9,45 @@
 /* ========================================
    HEADER SECTION
 ======================================== */
+/* M2IP 2027 Circular Date Card - Text Alignment Fix */
+
+.date-card {
+    width: 240px;
+    height: 240px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.date-card strong {
+    display: block;
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -2px;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.date-card span {
+    display: block;
+    width: 100%;
+    font-size: 8px;
+    letter-spacing: 0.10em;
+    text-align: center;
+    white-space: nowrap;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+@media (max-width: 1050px) {
+    .date-card strong {
+        font-size: 52px;
+    }
+}
 .event-details {
     display: flex;
     flex-direction: column;
