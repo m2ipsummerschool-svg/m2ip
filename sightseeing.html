@@ -4,54 +4,181 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sightseeing | M2IP Summer School 2027</title>
+    <title>Sightseeing | Summer School 2027</title>
 
     <link rel="stylesheet" href="style.css">
 
-   
+    <style>
+
+        /* =====================================
+           SIGHTSEEING DESTINATION SECTION
+        ===================================== */
+
+        .sightseeing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 27px;
+            margin-top: 25px;
+        }
+
+        /* Destination Card */
+
+        .sightseeing-card {
+            background: #ffffff;
+            border: 1px solid #d6d6d6;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        .sightseeing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
+        }
+
+        /* Destination Image */
+
+        .sightseeing-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Card Details */
+
+        .sightseeing-details {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 8px 12px 0;
+        }
+
+        .sightseeing-details .distance {
+            font-size: 16px;
+            color: #222222;
+            margin: 0 0 6px;
+        }
+
+        .sightseeing-details a {
+            font-size: 16px;
+            color: #087bff;
+            text-decoration: underline;
+            margin-bottom: 17px;
+        }
+
+        .sightseeing-details a:hover {
+            color: #0056b3;
+        }
+
+        /* Destination Name */
+
+        .sightseeing-details h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #172b45;
+            text-align: center;
+            margin: auto 0 0;
+            padding: 5px 10px 24px;
+        }
+
+        /* =====================================
+           TABLET RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 1024px) {
+
+            .sightseeing-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 22px;
+            }
+
+            .sightseeing-card img {
+                height: 230px;
+            }
+        }
+
+        /* =====================================
+           MOBILE RESPONSIVE
+        ===================================== */
+
+        @media (max-width: 600px) {
+
+            .sightseeing-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .sightseeing-card img {
+                height: 220px;
+            }
+
+            .sightseeing-details h2 {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
 
     <!-- =====================================
-         HEADER
+         HEADER SECTION
     ====================================== -->
 
     <header class="site-header">
 
+        <!-- Top Header -->
+
         <div class="header-top">
 
-            <!-- VIT Logo -->
+            <!-- VIT Logo - Left Side -->
+
             <div class="vit-logo">
-                <img src="blue-vit-logo.png" alt="VIT Logo">
+                <img src="blue-vit-logo.png"
+                     alt="VIT Chennai Logo">
             </div>
 
-    <!-- Summer School Details - Centre -->
-        <div class="brand">
-            <strong>SUMMER SCHOOL 2027</strong>
-            <small>SAS / Department of Mathematics / VIT Chennai</small>
-        </div>
+            <!-- Summer School Details - Centre -->
 
-            <!-- M2IP Logo -->
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <!-- M2IP Logo - Right Side -->
+
             <div class="m2ip-logo">
-                <img src="M2IP Logo.png" alt="M2IP Logo">
+                <img src="M2IP Logo.png"
+                     alt="M2IP Logo">
             </div>
 
         </div>
 
-        <!-- Navigation -->
+        <!-- Mobile Navigation Button -->
+
         <button class="menu-toggle"
                 aria-label="Toggle navigation"
-                aria-expanded="false"
-                onclick="toggleMenu()">
+                onclick="document.querySelector('.nav').classList.toggle('open')">
             ☰
         </button>
 
-        <nav class="nav" id="mainNav">
+        <!-- Navigation Bar -->
+
+        <nav class="nav">
 
             <a href="index.html">Home</a>
-            <a href="register.html">Registration</a>
+            <a href="register.html">Register</a>
             <a href="speakers.html">Speakers</a>
-            <a href="program.html">Programme</a>
+            <a href="program.html">Program</a>
             <a href="resources.html">Resources</a>
             <a href="awards.html">Awards</a>
             <a href="logistics.html">Logistics</a>
@@ -68,15 +195,38 @@
          MAIN SIGHTSEEING CONTENT
     ====================================== -->
 
-    <main class="inner sightseeing-page">
+    <main class="inner">
 
-        <section class="sightseeing-section">
+        <!-- Page Title - Same Structure as Resources -->
 
-            <h1 class="page-title">Sightseeing</h1>
+        <div class="page-title">
 
-            <p class="sightseeing-intro">
-                Nearby tourist destinations around Chennai
+            <p class="eyebrow">SUMMER SCHOOL 2027</p>
+
+            <h1>Sightseeing</h1>
+
+            <p>
+                Explore nearby tourist destinations and popular places
+                of interest around Chennai during your visit to VIT Chennai.
             </p>
+
+        </div>
+
+
+        <!-- Sightseeing Section -->
+
+        <section class="content-section">
+
+            <h2>Nearby Tourist Destinations</h2>
+
+            <p>
+                Discover some of the popular attractions located around
+                VIT Chennai and explore the cultural, historical and
+                recreational destinations of Tamil Nadu.
+            </p>
+
+
+            <!-- Destination Cards -->
 
             <div class="sightseeing-grid">
 
@@ -323,87 +473,69 @@
 
 
     <!-- =====================================
-         FOOTER
+         FOOTER SECTION
     ====================================== -->
 
     <footer class="footer">
 
-        <div class="footer-content">
+        <!-- Institution Details -->
 
-            <div class="footer-section">
+        <div>
 
-                <h3>M2IP 2027</h3>
+            <h3>SUMMER SCHOOL 2027</h3>
 
-                <p>
-                    Summer School on Mathematical Methods
-                    in Image Processing
-                </p>
-
-                <p>
-                    Department of Mathematics,<br>
-                    School of Advanced Sciences,<br>
-                    VIT University, Vandalur - Kelambakkam Road,<br>
-                    Chennai, Tamil Nadu - 600 127, India.
-                </p>
-
-            </div>
-
-
-            <div class="footer-section">
-
-                <h3>Contact Us</h3>
-
-                <p>
-                    Email:
-                    <a href="mailto:m2ipsummerschool@gmail.com">
-                        m2ipsummerschool@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    Phone:
-                    <a href="tel:+918778097050">
-                        +91 87780 97050
-                    </a>
-                </p>
-
-            </div>
+            <p>
+                Department of Mathematics, School of Advanced Sciences,
+                <br>
+                VIT University, Vandalur - Kelambakkam Road,
+                <br>
+                Chennai, Tamil Nadu, 600 127,
+                <br>
+                India.
+            </p>
 
         </div>
 
-        <div class="footer-bottom">
+
+        <!-- Quick Links -->
+
+        <div>
+
+            <h4>Quick Links</h4>
+
+            <a href="register.html">Registration</a>
+            <a href="program.html">Programme</a>
+            <a href="speakers.html">Speakers</a>
+
+        </div>
+
+
+        <!-- Contact Information -->
+
+        <div>
+
+            <h4>Contact Us</h4>
 
             <p>
-                © 2027 Vellore Institute of Technology.
-                All rights reserved.
+                Email: m2ipsummerschool@gmail.com
+                <br>
+                Phone: +91 87780 97050
             </p>
+
+        </div>
+
+
+        <!-- Copyright -->
+
+        <div class="copyright">
+
+            © 2027 Vellore Institute of Technology. All rights reserved.
 
         </div>
 
     </footer>
 
 
-    <!-- =====================================
-         MOBILE NAVIGATION SCRIPT
-    ====================================== -->
-
-    <script>
-
-        function toggleMenu() {
-
-            const nav = document.getElementById("mainNav");
-            const button = document.querySelector(".menu-toggle");
-
-            nav.classList.toggle("show");
-
-            button.setAttribute(
-                "aria-expanded",
-                nav.classList.contains("show")
-            );
-
-        }
-
-    </script>
-
 </body>
+
 </html>
