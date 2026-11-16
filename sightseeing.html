@@ -15,100 +15,60 @@
            SIGHTSEEING PAGE
         ===================================== */
 
-        .sightseeing-page {
-            max-width: 1500px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 30px 35px 55px;
-            box-sizing: border-box;
-        }
+/* Brand container */
+.site-header .header-top .brand {
+    flex: 1 !important;
+    margin-left: 35px !important;
+    text-align: left !important;
+    align-self: center !important;
+}
 
-        .sightseeing-section {
-            width: 100%;
-        }
+/* Summer School heading */
+.site-header .header-top .brand strong {
+    display: block !important;
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    color: #102b50 !important;
+    margin: 0 0 35px 0 !important;
+    padding: 0 !important;
+}
 
-        .sightseeing-section .page-title {
-            margin-bottom: 20px;
-        }
+/* Department subtitle */
+.site-header .header-top .brand small {
+    display: block !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #34445b !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
 
-        .sightseeing-intro {
-            font-size: 18px;
-            color: #555;
-            margin: 0 0 28px;
-        }
+/* Header alignment */
+.site-header .header-top {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
 
-        /* Destination grid */
+/* Mobile adjustment */
+@media (max-width: 768px) {
 
-        .sightseeing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 27px;
-        }
+    .site-header .header-top .brand {
+        margin-left: 5px !important;
+    }
 
-        /* Destination card */
+    .site-header .header-top .brand strong {
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+    }
 
-        .sightseeing-card {
-            background: #ffffff;
-            border: 1px solid #d6d6d6;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.10);
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.25s ease,
-                        box-shadow 0.25s ease;
-        }
+    .site-header .header-top .brand small {
+        font-size: 11px !important;
+    }
+}
 
-        .sightseeing-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.14);
-        }
-
-        /* Destination images */
-
-        .sightseeing-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Card information */
-
-        .sightseeing-details {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            padding: 5px 0 0;
-        }
-
-        .sightseeing-details .distance {
-            font-size: 16px;
-            color: #222222;
-            margin: 0 0 6px;
-        }
-
-        .sightseeing-details a {
-            font-size: 16px;
-            color: #087bff;
-            text-decoration: underline;
-            margin-bottom: 17px;
-        }
-
-        .sightseeing-details a:hover {
-            color: #0056b3;
-        }
-
-        /* Destination title */
-
-        .sightseeing-details h2 {
-            font-size: 22px;
-            font-weight: 700;
-            color: #172b45;
-            text-align: center;
-            margin: auto 0 0;
-            padding: 5px 10px 24px;
-        }
 
         /* =====================================
            TABLET RESPONSIVE
