@@ -773,3 +773,115 @@
 .venue-info strong {
     color: #176b87;
 }
+
+/* =====================================
+   SIGHTSEEING HEADER - MATCH OTHER PAGES
+===================================== */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 165px;
+    padding: 15px 5%;
+    box-sizing: border-box;
+}
+
+/* VIT logo */
+
+.vit-logo {
+    flex: 0 0 140px;
+}
+
+.vit-logo img {
+    width: 140px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Centre title and subtitle */
+
+.brand {
+    flex: 1;
+    margin-left: 35px;
+    text-align: left;
+}
+
+.brand h1 {
+    font-size: 28px !important;
+    font-weight: 500 !important;
+    line-height: 1.3;
+    color: #102b50;
+    margin: 0 0 35px !important;
+    padding: 0;
+}
+
+.brand p {
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #34445b;
+    margin: 0 !important;
+}
+
+/* M2IP logo */
+
+.m2ip-logo {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m2ip-logo img {
+    width: 85px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Mobile header */
+
+@media (max-width: 768px) {
+
+    .header-top {
+        min-height: auto;
+        padding: 15px 4%;
+        gap: 12px;
+    }
+
+    .vit-logo {
+        flex: 0 0 75px;
+    }
+
+    .vit-logo img {
+        width: 75px;
+    }
+
+    .brand {
+        margin-left: 5px;
+    }
+
+    .brand h1 {
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .brand p {
+        font-size: 11px !important;
+    }
+
+    .m2ip-logo {
+        flex: 0 0 55px;
+    }
+
+    .m2ip-logo img {
+        width: 50px;
+    }
+}
