@@ -1,167 +1,342 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Symposium | Summer School 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sightseeing | M2IP Summer School 2027</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header Section -->
-<header class="site-header">
+    <!-- HEADER SECTION -->
+    <header class="site-header">
 
-    <!-- Top Header -->
-    <div class="header-top">
+        <div class="header-top">
 
-        <!-- VIT Logo - Left Side -->
-        <div class="vit-logo">
-            <img src="blue-vit-logo.png"
-                 alt="VIT Chennai Logo">
+            <div class="vit-logo">
+                <img src="blue-vit-logo.png" alt="VIT Chennai Logo">
+            </div>
+
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <div class="m2ip-logo">
+                <img src="M2IP Logo.png" alt="M2IP Logo">
+            </div>
+
         </div>
 
-        <!-- Summer School Details - Centre -->
-        <div class="brand">
-            <strong>SUMMER SCHOOL 2027</strong>
-            <small>SAS / Department of Mathematics / VIT Chennai</small>
-        </div>
+        <!-- Mobile Navigation Button -->
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav').classList.toggle('open')">
+            ☰
+        </button>
 
-        <!-- M2IP Logo - Right Side -->
-        <div class="m2ip-logo">
-            <img src="M2IP Logo.png"
-                 alt="M2IP Logo">
-        </div>
+        <!-- Navigation Bar -->
+        <nav class="nav">
 
-    </div>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="program.html">Program</a>
+            <a href="resources.html">Resources</a>
+            <a href="awards.html">Awards</a>
+            <a href="logistics.html">Logistics</a>
+            <a href="symposium.html">Sightseeing</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="people.html">People</a>
 
-    <!-- Mobile Navigation Button -->
-    <button class="menu-toggle"
-            aria-label="Toggle navigation"
-            onclick="document.querySelector('.nav').classList.toggle('open')">
-        ☰
-    </button>
+        </nav>
 
-    <!-- Navigation Bar -->
-    <nav class="nav">
+    </header>
 
-        <a class="active" href="index.html">Home</a>
-        <a href="register.html">Register</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="program.html">Program</a>
-        <a href="symposium.html">Symposium</a>
-        <a href="resources.html">Resources</a>
-        <a href="awards.html">Awards</a>
-        <a href="logistics.html">Logistics</a>
-        <a href="sponsors.html">Sponsors</a>
-        <a href="people.html">People</a>
 
-    </nav>
-
-</header>
-
+    <!-- MAIN CONTENT -->
     <main class="inner">
 
+        <!-- PAGE TITLE -->
         <div class="page-title">
-            <p class="eyebrow">SUMMER SCHOOL 2026</p>
-            <h1>Symposium</h1>
-            <p>Replace the sample information below with confirmed event details.</p>
-        </div>
 
-        <section class="content-section">
+            <p class="eyebrow">SUMMER SCHOOL 2027</p>
 
-            <h2>Co-located Symposium</h2>
+            <h1>Sightseeing</h1>
 
             <p>
-                Introduce the symposium associated with the summer school, its
-                theme, objectives and intended audience.
+                Explore popular tourist attractions and places of interest
+                around Chennai during your visit to VIT Chennai.
             </p>
 
-            <div class="callout">
-                <span class="eyebrow">SPECIAL EVENT</span>
+        </div>
 
-                <h3>[Symposium title]</h3>
 
-                <p>
-                    [Add a short description of the symposium, invited talks,
-                    panel discussions and research themes.]
-                </p>
+        <!-- SIGHTSEEING SECTION -->
+        <section class="sightseeing-section">
 
-                <p>
-                    <b>Date:</b> [Date]
-                    &nbsp;
-                    <b>Venue:</b> [Venue]
-                </p>
-            </div>
+            <div class="sightseeing-container">
 
-            <h3>Approximate Programme</h3>
+                <div class="sightseeing-intro">
+                    <h2>Places to Explore</h2>
 
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                        </tr>
-                    </thead>
+                    <p>
+                        Discover historical landmarks, cultural destinations,
+                        beaches and recreational attractions located around
+                        VIT Chennai.
+                    </p>
+                </div>
 
-                    <tbody>
-                        <tr>
-                            <td>09:00–10:00</td>
-                            <td>Inauguration / Keynote</td>
-                        </tr>
 
-                        <tr>
-                            <td>10:00–11:00</td>
-                            <td>Invited Talk 1</td>
-                        </tr>
+                <div class="sightseeing-grid">
 
-                        <tr>
-                            <td>11:00–11:30</td>
-                            <td>Tea Break</td>
-                        </tr>
+                    <!-- MAHABALIPURAM -->
+                    <article class="sightseeing-card">
 
-                        <tr>
-                            <td>11:30–13:00</td>
-                            <td>Technical Sessions</td>
-                        </tr>
+                        <img src="mahabalipuram.webp"
+                             alt="Mahabalipuram">
 
-                        <tr>
-                            <td>13:00–14:00</td>
-                            <td>Lunch</td>
-                        </tr>
+                        <div class="sightseeing-card-body">
 
-                        <tr>
-                            <td>14:00–16:00</td>
-                            <td>Invited Talks / Panel Discussion</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            <span class="sightseeing-distance">
+                                32 KM from VIT Chennai
+                            </span>
 
-            <h3>Venue</h3>
+                            <h3>Mahabalipuram</h3>
 
-            <p>[Building, room, campus address]</p>
+                            <a href="https://traveltriangle.com/blog/places-to-visit-in-mahabalipuram/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
 
-            <div class="map-placeholder">
-                Add an embedded Google Map or venue photograph here.
+                        </div>
+
+                    </article>
+
+
+                    <!-- VANDALUR ZOO -->
+                    <article class="sightseeing-card">
+
+                        <img src="vz.jpg"
+                             alt="Vandalur Zoo">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                8.2 KM from VIT Chennai
+                            </span>
+
+                            <h3>Vandalur Zoo</h3>
+
+                            <a href="https://world-tourist-places.blogspot.com/2011/11/vandalur-zoo.html"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MARINA MALL -->
+                    <article class="sightseeing-card">
+
+                        <img src="mm.jpg"
+                             alt="Marina Mall">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                10 KM from VIT Chennai
+                            </span>
+
+                            <h3>Marina Mall</h3>
+
+                            <a href="https://www.instagram.com/marinamallchennai/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BLUE FLAG BEACH -->
+                    <article class="sightseeing-card">
+
+                        <img src="beach.jpg"
+                             alt="Blue Flag Beach">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                11 KM from VIT Chennai
+                            </span>
+
+                            <h3>Blue Flag Beach</h3>
+
+                            <a href="https://www.instagram.com/p/DHnzbMWSYPQ/?hl=en"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PONDICHERRY -->
+                    <article class="sightseeing-card">
+
+                        <img src="pondy.jpg"
+                             alt="Pondicherry">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                126 KM from VIT Chennai
+                            </span>
+
+                            <h3>Pondicherry</h3>
+
+                            <a href="https://pondicherrytourism.co.in/places-to-visit-in-pondicherry#google_vignette"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- KANCHIPURAM -->
+                    <article class="sightseeing-card">
+
+                        <img src="kanchi.webp"
+                             alt="Kanchipuram">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                58 KM from VIT Chennai
+                            </span>
+
+                            <h3>Kanchipuram</h3>
+
+                            <a href="https://www.thrillophilia.com/destinations/kanchipuram/places-to-visit"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MARINA BEACH -->
+                    <article class="sightseeing-card">
+
+                        <img src="beach.avif"
+                             alt="Marina Beach">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                34 KM from VIT Chennai
+                            </span>
+
+                            <h3>Marina Beach</h3>
+
+                            <a href="https://traveltriangle.com/blog/places-to-visit-near-marina-beach/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DAKSHINACHITRA -->
+                    <article class="sightseeing-card">
+
+                        <img src="dak.jpg"
+                             alt="DakshinaChitra">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                19 KM from VIT Chennai
+                            </span>
+
+                            <h3>DakshinaChitra</h3>
+
+                            <a href="https://www.tamilnadutourism.com/attractions/arts-museum/dakshinaChitra-heritage-museum.php"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- VALLUVAR KOTTAM -->
+                    <article class="sightseeing-card">
+
+                        <img src="kottam.jpg"
+                             alt="Valluvar Kottam">
+
+                        <div class="sightseeing-card-body">
+
+                            <span class="sightseeing-distance">
+                                36 KM from VIT Chennai
+                            </span>
+
+                            <h3>Valluvar Kottam</h3>
+
+                            <a href="https://chennaitourism.travel/valluvar-kottam-monument-chennai"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                To know more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
             </div>
 
         </section>
 
     </main>
 
-     <!-- Footer Section -->
+
+    <!-- FOOTER SECTION -->
     <footer class="footer">
 
-        <!-- Institution Details -->
         <div>
 
             <h3>SUMMER SCHOOL 2027</h3>
 
             <p>
-                Department of Mathematics, School of Advanced Sciences, 
+                Department of Mathematics, School of Advanced Sciences,
                 <br>
                 VIT University, Vandalur - Kelambakkam Road,
                 <br>
@@ -172,7 +347,7 @@
 
         </div>
 
-        <!-- Quick Links -->
+
         <div>
 
             <h4>Quick Links</h4>
@@ -183,7 +358,7 @@
 
         </div>
 
-        <!-- Contact Information -->
+
         <div>
 
             <h4>Contact Us</h4>
@@ -196,15 +371,15 @@
 
         </div>
 
-        <!-- Copyright -->
+
         <div class="copyright">
 
-            © 2027 Vellore Institute of Technology. All rights reserved.
+            © 2027 Vellore Institute of Technology.
+            All rights reserved.
 
         </div>
 
     </footer>
 
 </body>
-
 </html>
