@@ -9,7 +9,25 @@
 /* ========================================
    HEADER SECTION
 ======================================== */
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
 
+.event-details span {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .event-details span {
+        font-size: 17px;
+    }
+}
 .site-header {
     width: 100%;
     background: #ffffff;
