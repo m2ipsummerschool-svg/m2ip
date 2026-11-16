@@ -19,8 +19,14 @@
 .event-details span {
     font-size: 22px;
     font-weight: 700;
-    color:  #ffffff;
+    color: #ffffff;
     line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .event-details span {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 600px) {
