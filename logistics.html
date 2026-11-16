@@ -6,48 +6,334 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Logistics | Summer School 2026</title>
+    <title>Logistics | M2IP Summer School 2027</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =====================================
+           LOGISTICS PAGE
+        ===================================== */
+
+        /* Venue */
+        .venue-info {
+            background: #f3f7f8;
+            padding: 22px 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #2b9a91;
+            border-radius: 5px;
+        }
+
+        .venue-info h3 {
+            color: #10243a;
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .venue-info p {
+            color: #536779;
+            font-size: 15px;
+            line-height: 1.9;
+            margin: 0;
+        }
+
+        .venue-info strong {
+            color: #176b87;
+        }
+
+        /* How to Reach */
+        .travel-section {
+            max-width: 1120px;
+            width: 100%;
+            margin: 45px auto;
+            padding: 0 25px;
+        }
+
+        .travel-section .section-title {
+            color: #10243a;
+            font-family: 'Manrope', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            border-left: 4px solid #176b87;
+            padding-left: 14px;
+            margin-bottom: 40px;
+        }
+
+        .travel-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            gap: 35px;
+            margin-bottom: 55px;
+        }
+
+        .travel-row.reverse .travel-content {
+            order: 2;
+        }
+
+        .travel-row.reverse .travel-image {
+            order: 1;
+        }
+
+        .travel-content h3 {
+            color: #10243a;
+            font-family: 'Manrope', sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .travel-content p {
+            color: #536779;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .travel-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0;
+        }
+
+        .travel-content li {
+            color: #536779;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .info-icon {
+            color: #176b87;
+            font-size: 19px;
+            margin-right: 8px;
+        }
+
+        .travel-content a {
+            color: #176b87;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .travel-content a:hover {
+            color: #2b9a91;
+            text-decoration: underline;
+        }
+
+        .travel-image img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(16, 36, 58, 0.12);
+        }
+
+        /* Accommodation */
+        .accommodation-section {
+            width: 100%;
+            padding: 40px 25px;
+            background: #ffffff;
+        }
+
+        .accommodation-container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .accommodation-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            color: #10243a;
+            border-left: 4px solid #2b9a91;
+            padding-left: 15px;
+            margin: 0 0 22px;
+        }
+
+        .accommodation-coming-soon {
+            background: #f3f7f8;
+            border-left: 4px solid #2b9a91;
+            border-radius: 6px;
+            padding: 28px 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .accommodation-coming-soon p {
+            color: #536779;
+            font-family: 'Manrope', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Separate Campus Map Section */
+        .campus-map-section {
+            width: 100%;
+            padding: 45px 25px 65px;
+            background: #f3f7f8;
+            margin-top: 25px;
+        }
+
+        .campus-map-container {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .campus-map-title {
+            color: #10243a;
+            font-family: 'Manrope', sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            border-left: 4px solid #2b9a91;
+            padding-left: 15px;
+            margin: 0 0 25px;
+        }
+
+        .campus-map-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .campus-map-grid iframe {
+            display: block;
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(16, 36, 58, 0.10);
+        }
+
+        .campus-map-grid img {
+            display: block;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(16, 36, 58, 0.10);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .travel-section {
+                padding: 0 18px;
+            }
+
+            .travel-row {
+                grid-template-columns: 1fr;
+                gap: 22px;
+                margin-bottom: 45px;
+            }
+
+            .travel-row.reverse .travel-content,
+            .travel-row.reverse .travel-image {
+                order: initial;
+            }
+
+            .travel-image img {
+                height: 260px;
+            }
+
+            .travel-section .section-title,
+            .accommodation-title,
+            .campus-map-title {
+                font-size: 25px;
+            }
+
+            .campus-map-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .campus-map-grid iframe,
+            .campus-map-grid img {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .travel-section {
+                padding: 0 15px;
+            }
+
+            .travel-content h3 {
+                font-size: 20px;
+            }
+
+            .travel-image img {
+                height: 220px;
+            }
+
+            .accommodation-section,
+            .campus-map-section {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .accommodation-coming-soon {
+                padding: 22px 16px;
+            }
+
+            .accommodation-coming-soon p {
+                font-size: 15px;
+            }
+
+            .campus-map-grid iframe,
+            .campus-map-grid img {
+                height: 230px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <!-- Header Section -->
-<header class="site-header">
+    <!-- =====================================
+         HEADER SECTION
+    ====================================== -->
 
-    <!-- Top Header -->
-    <div class="header-top">
+    <header class="site-header">
 
-        <!-- VIT Logo - Left Side -->
-        <div class="vit-logo">
-            <img src="blue-vit-logo.png"
-                 alt="VIT Chennai Logo">
+        <div class="header-top">
+
+            <!-- VIT Logo -->
+            <div class="vit-logo">
+                <img src="blue-vit-logo.png"
+                     alt="VIT Chennai Logo">
+            </div>
+
+            <!-- Summer School Details -->
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <!-- M2IP Logo -->
+            <div class="m2ip-logo">
+                <img src="M2IP Logo.png"
+                     alt="M2IP Logo">
+            </div>
+
         </div>
 
-        <!-- Summer School Details - Centre -->
-        <div class="brand">
-            <strong>SUMMER SCHOOL 2027</strong>
-            <small>SAS / Department of Mathematics / VIT Chennai</small>
-        </div>
+        <!-- Mobile Navigation Button -->
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav').classList.toggle('open')">
+            ☰
+        </button>
 
-        <!-- M2IP Logo - Right Side -->
-        <div class="m2ip-logo">
-            <img src="M2IP Logo.png"
-                 alt="M2IP Logo">
-        </div>
-
-    </div>
-
-    <!-- Mobile Navigation Button -->
-    <button class="menu-toggle"
-            aria-label="Toggle navigation"
-            onclick="document.querySelector('.nav').classList.toggle('open')">
-        ☰
-    </button>
-
-    <!-- Navigation Bar -->
-    <nav class="nav">
+        <!-- Navigation Bar -->
+        <nav class="nav">
 
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
@@ -55,282 +341,289 @@
             <a href="program.html">Program</a>
             <a href="resources.html">Resources</a>
             <a href="awards.html">Awards</a>
-            <a href="logistics.html">Logistics</a>
-            <a href="symposium.html">Sightseeing</a>
+            <a class="active" href="logistics.html">Logistics</a>
+            <a href="sightseeing.html">Sightseeing</a>
             <a href="sponsors.html">Sponsors</a>
             <a href="people.html">People</a>
 
-    </nav>
+        </nav>
 
-</header>
+    </header>
 
 
-    <!-- Main Content -->
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
     <main class="inner">
 
-        <!-- Page Title -->
+        <!-- PAGE TITLE -->
         <div class="page-title">
 
-            <p class="eyebrow">SUMMER SCHOOL 2026</p>
+            <p class="eyebrow">SUMMER SCHOOL 2027</p>
 
             <h1>Logistics</h1>
 
             <p>
-                Replace the sample information below with confirmed
-                event details.
+                Find information about the venue, travel arrangements
+                and accommodation for M2IP Summer School 2027.
             </p>
 
         </div>
 
-        <!-- Logistics Information -->
+
+        <!-- =====================================
+             VENUE INFORMATION
+        ====================================== -->
+
         <section class="content-section">
 
-            <h2>Travel and Accommodation</h2>
+            <h2>Venue Information</h2>
 
-            <!-- Venue Information -->
-<div class="info-block venue-info">
+            <div class="info-block venue-info">
 
-    <h3>Venue</h3>
-
-    <p>
-        <strong>Kamaraj Auditorium</strong><br>
-        Academic Block – 3<br>
-        VIT University, Vandalur – Kelambakkam Road<br>
-        Chennai – 600127.
-    </p>
-
-</div>
-  <!-- How to Reach Section -->
-<section class="container my-5">
-  <h2 class="section-title">How to Reach</h2>
-
- <!-- By Air -->
-<div class="row align-items-center mb-5">
-  <div class="col-md-6">
-    <h3><b>By Air</b></h3>
-    <p>Chennai is served by the <b>Chennai International Airport (MAA)</b>, with both domestic and international terminals.</p>
-    <ul class="list-unstyled">
-      <li><span class="info-icon">✈️</span> <b>Taxi:</b> Prepaid and app-based taxi services like Uber and Ola are available. The drive to VIT Chennai takes 30–45 minutes.</li>
-      <li><span class="info-icon">🚌</span> <b>Public Transport:</b> MTC buses and suburban trains are also available but may be less convenient if traveling with luggage.</li>
-    </ul>
-    <!-- ✅ Bus routes link -->
-    <p>
-      <a href="https://moovitapp.com/tripplan/chennai-4612/poi/UniversityVellore%20Institute%20of%20Technology%20%5BVIT%20University%5D%20-%20Chennai%20Campus,%20Chengalpattu/Chennai%20International%20Airport%20%28MAA%29,%20Chengalpattu/itinerary/en?customerId=4908&ref=1&af_sub8=%2Findex%2Fen%2Fpublic_transit-Vit_University_Chennai_Campus-Chennai-site_17102726-4612&af_sub9=Search%20bar%20button&poiType=site&fll=12.981806_80.160997&tll=12.842605_80.152684&metroSeoName=Chennai" 
-         target="_blank" class="text-decoration-none text-primary">
-        Click here to see the bus routes
-      </a>
-    </p>
-  </div>
-  <div class="col-md-6">
-    <img src="airport.jpg" alt="Airport" class="img-fluid rounded shadow">
-  </div>
-</div>
-
-
- <!-- By Train -->
-<div class="row align-items-center mb-5 flex-md-row-reverse">
-  <div class="col-md-6">
-    <h3><b>By Train</b></h3>
-    <p>Chennai has two major railway stations: <b>Chennai Central</b> and <b>Egmore</b>. Both are well connected to major Indian cities.</p>
-    <ul class="list-unstyled">
-      <li><span class="info-icon">🚆</span><b>From Chennai Central:</b> Taxis and metro services are available. Approx. 45–60 minutes to VIT Chennai.</li>
-      <li><span class="info-icon">🚆</span><b>From Egmore:</b> Well connected by suburban trains and buses. Travel time 40–50 minutes.</li>
-    </ul>
-    <!-- ✅ Train routes link -->
-    <p>
-      <a href="https://moovitapp.com/tripplan/chennai-4612/poi/UniversityVellore%20Institute%20of%20Technology%20%5BVIT%20University%5D%20-%20Chennai%20Campus,%20Chengalpattu/Chennai%20Central/en?customerId=4908&ref=1&af_sub8=%2Findex%2Fen%2Fpublic_transit-Vit_University_Chennai_Campus-Chennai-site_17102726-4612&af_sub9=Search%20bar%20button&poiType=site&tll=12.842605_80.152684&metroSeoName=Chennai&fll=13.08353_80.274202" 
-         target="_blank" class="text-decoration-none text-primary">
-          Click here to see the bus routes
-      </a>
-    </p>
-  </div>
-  <div class="col-md-6">
-    <img src="railway.jpg" alt="Train Station" class="img-fluid rounded shadow">
-  </div>
-</div>
-
-<!-- By Bus -->
-<div class="row align-items-center mb-5">
-  <div class="col-md-6">
-    <h3><b>By Bus</b></h3>
-    <p>Chennai Mofussil Bus Terminus (CMBT), one of Asia’s largest bus stations, connects Chennai with many South Indian cities.</p><p>Kalaignar Centenary Bus Terminus (Kilambakkam): A new modern terminus in South Chennai, closer to VIT. Travel time: ~25–35 minutes by taxi/auto or MTC buses.</p>
-    <ul class="list-unstyled">
-      <li><span class="info-icon">🚌</span><b>Local Buses:</b> Frequent MTC buses connect CMBT to various parts of the city.</li>
-      <li><span class="info-icon">🚖</span><b>Taxi/Auto:</b> Prepaid taxis and Ola/Uber are available outside the bus terminus. Approx. 40–60 minutes to VIT Chennai.</li>
-    </ul>
-    <!-- ✅ Bus routes link -->
-    <p>
-      <a href="https://moovitapp.com/tripplan/chennai-4612/poi/UniversityVellore%20Institute%20of%20Technology%20%5BVIT%20University%5D%20-%20Chennai%20Campus,%20Chengalpattu/t/en?customerId=4908&ref=1&af_sub8=%2Findex%2Fen%2Fpublic_transit-Vit_University_Chennai_Campus-Chennai-site_17102726-4612&af_sub9=Search%20bar%20button&poiType=site&tll=12.842605_80.152684&metroSeoName=Chennai" 
-         target="_blank" class="text-decoration-none text-primary">
-         Click here to see the bus routes
-      </a>
-    </p>
-  </div>
-  <div class="col-md-6">
-    <img src="bus.webp" alt="Bus Station" class="img-fluid rounded shadow">
-  </div>
-</div>
-
-
-           
-<!-- =========================================
-     ACCOMMODATION SECTION
-========================================= -->
-
-<section class="accommodation-section">
-
-    <div class="accommodation-container">
-
-        <h2 class="accommodation-title">Accommodation</h2>
-
-        <p class="accommodation-intro">
-            Accommodation facilities are available inside the VIT Chennai
-            campus for participants attending the Summer School.
-            The available options and corresponding tariffs are listed below.
-        </p>
-
-        <!-- MALE ACCOMMODATION -->
-        <div class="accommodation-category">
-
-            <div class="accommodation-category-heading">
-                <span class="accommodation-icon">♂</span>
-                <div>
-                    <h3>Inside Campus – Male</h3>
-                    <p>Accommodation options and daily tariff</p>
-                </div>
-            </div>
-
-            <div class="accommodation-table-wrapper">
-
-                <table class="accommodation-table">
-
-                    <thead>
-                        <tr>
-                            <th>S. No.</th>
-                            <th>Accommodation Option</th>
-                            <th>Tariff</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td>AC Sharing with Common Restroom – With Food</td>
-                            <td><span class="price">₹1,300</span><small>/day</small></td>
-                        </tr>
-
-                        <tr>
-                            <td>02</td>
-                            <td>Non-AC Sharing with Common Restroom – With Food</td>
-                            <td><span class="price">₹1,000</span><small>/day</small></td>
-                        </tr>
-
-                        <tr>
-                            <td>03</td>
-                            <td>AC Sharing with Common Restroom – Without Food</td>
-                            <td><span class="price">₹900</span><small>/day</small></td>
-                        </tr>
-
-                        <tr>
-                            <td>04</td>
-                            <td>Non-AC Sharing with Common Restroom – Without Food</td>
-                            <td><span class="price">₹600</span><small>/day</small></td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </div>
-
-
-        <!-- FEMALE ACCOMMODATION -->
-        <div class="accommodation-category">
-
-            <div class="accommodation-category-heading">
-                <span class="accommodation-icon">♀</span>
-                <div>
-                    <h3>Inside Campus – Female</h3>
-                    <p>Accommodation options and daily tariff</p>
-                </div>
-            </div>
-
-            <div class="accommodation-table-wrapper">
-
-                <table class="accommodation-table">
-
-                    <thead>
-                        <tr>
-                            <th>S. No.</th>
-                            <th>Accommodation Option</th>
-                            <th>Tariff</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td>Non-AC Sharing with Common Restroom – With Food</td>
-                            <td><span class="price">₹1,000</span><small>/day</small></td>
-                        </tr>
-
-                        <tr>
-                            <td>02</td>
-                            <td>Non-AC Sharing with Common Restroom – Without Food</td>
-                            <td><span class="price">₹600</span><small>/day</small></td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        </div>
-
-
-        <!-- ENQUIRY INFORMATION -->
-        <div class="accommodation-enquiry">
-
-            <div class="enquiry-icon">☎</div>
-
-            <div class="enquiry-content">
-                <h3>Accommodation Enquiries</h3>
+                <h3>Venue</h3>
 
                 <p>
-                    For any further enquiries regarding accommodation,
-                    please contact:
+                    <strong>Kamaraj Auditorium</strong><br>
+                    Academic Block – 3<br>
+                    VIT University, Vandalur – Kelambakkam Road<br>
+                    Chennai – 600127.
                 </p>
 
-                <strong>Mr. Suresh Kumar</strong>
-
-                <a href="tel:+919655010998">
-                    +91 9655010998
-                </a>
             </div>
 
-        </div>
+        </section>
 
-    </div>
-  <div class="map-section">          
-  <!-- Map + Image -->
-  <div class="row g-4">
-    <div class="col-md-6">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.178862832812!2d80.15363987462314!3d12.840640918367667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259aa7ef4c4b7%3A0xeab3ff5b05a6e94f!2sVIT%20Chennai%20Campus!5e0!3m2!1sen!2sin!4v1692960123456!5m2!1sen!2sin" 
-        width="100%" height="350" style="border:0;" allowfullscreen loading="lazy">
-      </iframe>
-    </div>
-    <div class="col-md-6">
-      <img src="vitc.jpg" alt="VIT Chennai" class="map-img shadow-sm">
-    </div>
-  </div>
-        </div>
-</section>
+
+        <!-- =====================================
+             HOW TO REACH
+        ====================================== -->
+
+        <section class="travel-section">
+
+            <h2 class="section-title">How to Reach</h2>
+
+
+            <!-- BY AIR -->
+            <div class="travel-row">
+
+                <div class="travel-content">
+
+                    <h3>By Air</h3>
+
+                    <p>
+                        Chennai is served by the
+                        <strong>Chennai International Airport (MAA)</strong>,
+                        with both domestic and international terminals.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <span class="info-icon">✈️</span>
+                            <strong>Taxi:</strong>
+                            Prepaid and app-based taxi services like Uber
+                            and Ola are available. The drive to VIT Chennai
+                            takes 30–45 minutes.
+                        </li>
+
+                        <li>
+                            <span class="info-icon">🚌</span>
+                            <strong>Public Transport:</strong>
+                            MTC buses and suburban trains are also available
+                            but may be less convenient if travelling with luggage.
+                        </li>
+                    </ul>
+
+                    <p>
+                        <a href="https://moovitapp.com/tripplan/chennai-4612/poi/UniversityVellore%20Institute%20of%20Technology%20%5BVIT%20University%5D%20-%20Chennai%20Campus,%20Chengalpattu/Chennai%20International%20Airport%20%28MAA%29,%20Chengalpattu/itinerary/en?customerId=4908&ref=1&af_sub8=%2Findex%2Fen%2Fpublic_transit-Vit_University_Chennai_Campus-Chennai-site_17102726-4612&af_sub9=Search%20bar%20button&poiType=site&fll=12.981806_80.160997&tll=12.842605_80.152684&metroSeoName=Chennai"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Click here to see the bus routes →
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="travel-image">
+                    <img src="airport.jpg" alt="Chennai International Airport">
+                </div>
+
+            </div>
+
+
+            <!-- BY TRAIN -->
+            <div class="travel-row reverse">
+
+                <div class="travel-content">
+
+                    <h3>By Train</h3>
+
+                    <p>
+                        Chennai has two major railway stations:
+                        <strong>Chennai Central</strong> and
+                        <strong>Egmore</strong>. Both are well connected
+                        to major Indian cities.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <span class="info-icon">🚆</span>
+                            <strong>From Chennai Central:</strong>
+                            Taxis and metro services are available.
+                            Approx. 45–60 minutes to VIT Chennai.
+                        </li>
+
+                        <li>
+                            <span class="info-icon">🚆</span>
+                            <strong>From Egmore:</strong>
+                            Well connected by suburban trains and buses.
+                            Travel time 40–50 minutes.
+                        </li>
+                    </ul>
+
+                    <p>
+                        <a href="https://moovitapp.com/tripplan/chennai-4612/poi/UniversityVellore%20Institute%20of%20Technology%20%5BVIT%20University%5D%20-%20Chennai%20Campus,%20Chengalpattu/Chennai%20Central/en?customerId=4908&ref=1&af_sub8=%2Findex%2Fen%2Fpublic_transit-Vit_University_Chennai_Campus-Chennai-site_17102726-4612&af_sub9=Search%20bar%20button&poiType=site&tll=12.842605_80.152684&metroSeoName=Chennai&fll=13.08353_80.274202"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Click here to see the train routes →
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="travel-image">
+                    <img src="railway.jpg" alt="Chennai Railway Station">
+                </div>
+
+            </div>
+
+
+            <!-- BY BUS -->
+            <div class="travel-row">
+
+                <div class="travel-content">
+
+                    <h3>By Bus</h3>
+
+                    <p>
+                        Chennai Mofussil Bus Terminus (CMBT), one of
+                        Asia's largest bus stations, connects Chennai
+                        with many South Indian cities.
+                    </p>
+
+                    <p>
+                        Kalaignar Centenary Bus Terminus (Kilambakkam)
+                        is a modern terminus in South Chennai, closer
+                        to VIT. Travel time is approximately 25–35 minutes
+                        by taxi, auto or MTC buses.
+                    </p>
+
+                    <ul>
+                        <li>
+                            <span class="info-icon">🚌</span>
+                            <strong>Local Buses:</strong>
+                            Frequent MTC buses connect CMBT to various
+                            parts of the city.
+                        </li>
+
+                        <li>
+                            <span class="info-icon">🚖</span>
+                            <strong>Taxi/Auto:</strong>
+                            Prepaid taxis and Ola/Uber are available
+                            outside the bus terminus. Approx. 40–60
+                            minutes to VIT Chennai.
+                        </li>
+                    </ul>
+
+                    <p>
+                        <a href="https://moovitapp.com/tripplan/chennai-4612/poi/UniversityVellore%20Institute%20of%20Technology%20%5BVIT%20University%5D%20-%20Chennai%20Campus,%20Chengalpattu/t/en?customerId=4908&ref=1&af_sub8=%2Findex%2Fen%2Fpublic_transit-Vit_University_Chennai_Campus-Chennai-site_17102726-4612&af_sub9=Search%20bar%20button&poiType=site&tll=12.842605_80.152684&metroSeoName=Chennai"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Click here to see the bus routes →
+                        </a>
+                    </p>
+
+                </div>
+
+                <div class="travel-image">
+                    <img src="bus.webp" alt="Bus Station">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ACCOMMODATION - SEPARATE SECTION
+        ====================================== -->
+
+        <section class="accommodation-section">
+
+            <div class="accommodation-container">
+
+                <h2 class="accommodation-title">Accommodation</h2>
+
+                <div class="accommodation-coming-soon">
+
+                    <p>
+                        Accommodation details will be updated soon.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CAMPUS LOCATION - SEPARATE SECTION
+        ====================================== -->
+
+        <section class="campus-map-section">
+
+            <div class="campus-map-container">
+
+                <h2 class="campus-map-title">Campus Location</h2>
+
+                <div class="campus-map-grid">
+
+                    <!-- GOOGLE MAP -->
+                    <div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.178862832812!2d80.15363987462314!3d12.840640918367667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259aa7ef4c4b7%3A0xeab3ff5b05a6e94f!2sVIT%20Chennai%20Campus!5e0!3m2!1sen!2sin!4v1692960123456!5m2!1sen!2sin"
+                            title="VIT Chennai Campus Location"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+
+                    <!-- CAMPUS IMAGE -->
+                    <div>
+
+                        <img src="vitc.jpg"
+                             alt="VIT Chennai Campus">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
-     <!-- Footer Section -->
+
+    <!-- =====================================
+         FOOTER SECTION
+    ====================================== -->
+
     <footer class="footer">
 
         <!-- Institution Details -->
@@ -339,7 +632,7 @@
             <h3>SUMMER SCHOOL 2027</h3>
 
             <p>
-                Department of Mathematics, School of Advanced Sciences, 
+                Department of Mathematics, School of Advanced Sciences,
                 <br>
                 VIT University, Vandalur - Kelambakkam Road,
                 <br>
@@ -349,6 +642,7 @@
             </p>
 
         </div>
+
 
         <!-- Quick Links -->
         <div>
@@ -360,6 +654,7 @@
             <a href="speakers.html">Speakers</a>
 
         </div>
+
 
         <!-- Contact Information -->
         <div>
@@ -374,15 +669,16 @@
 
         </div>
 
+
         <!-- Copyright -->
         <div class="copyright">
 
-            © 2027 Vellore Institute of Technology. All rights reserved.
+            © 2027 Vellore Institute of Technology.
+            All rights reserved.
 
         </div>
 
     </footer>
 
 </body>
-
 </html>
