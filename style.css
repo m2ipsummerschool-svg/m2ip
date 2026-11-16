@@ -774,3 +774,39 @@
     color: #176b87;
 }
 
+
+/* Awards Page */
+.award-prizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.award-prizes span {
+    display: inline-block;
+    padding: 8px 13px;
+    background: #f3f7f8;
+    border: 1px solid #e1e8ec;
+    border-radius: 8px;
+    color: #10243a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card h4 {
+    color: var(--navy);
+    margin: 18px 0 8px;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin: 8px 0 15px;
+}
+
+.card ul li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
