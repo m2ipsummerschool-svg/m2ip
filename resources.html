@@ -1,50 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Resources | Summer School 2027</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-   <!-- Header Section -->
-<header class="site-header">
+    <!-- Header Section -->
+    <header class="site-header">
 
-    <!-- Top Header -->
-    <div class="header-top">
+        <!-- Top Header -->
+        <div class="header-top">
 
-        <!-- VIT Logo - Left Side -->
-        <div class="vit-logo">
-            <img src="blue-vit-logo.png"
-                 alt="VIT Chennai Logo">
+            <!-- VIT Logo - Left Side -->
+            <div class="vit-logo">
+                <img src="blue-vit-logo.png"
+                     alt="VIT Chennai Logo">
+            </div>
+
+            <!-- Summer School Details - Centre -->
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <!-- M2IP Logo - Right Side -->
+            <div class="m2ip-logo">
+                <img src="M2IP Logo.png"
+                     alt="M2IP Logo">
+            </div>
+
         </div>
 
-        <!-- Summer School Details - Centre -->
-        <div class="brand">
-            <strong>SUMMER SCHOOL 2027</strong>
-            <small>SAS / Department of Mathematics / VIT Chennai</small>
-        </div>
+        <!-- Mobile Navigation Button -->
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav').classList.toggle('open')">
+            ☰
+        </button>
 
-        <!-- M2IP Logo - Right Side -->
-        <div class="m2ip-logo">
-            <img src="M2IP Logo.png"
-                 alt="M2IP Logo">
-        </div>
-
-    </div>
-
-    <!-- Mobile Navigation Button -->
-    <button class="menu-toggle"
-            aria-label="Toggle navigation"
-            onclick="document.querySelector('.nav').classList.toggle('open')">
-        ☰
-    </button>
-
-    <!-- Navigation Bar -->
-    <nav class="nav">
+        <!-- Navigation Bar -->
+        <nav class="nav">
 
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
@@ -53,88 +56,171 @@
             <a href="resources.html">Resources</a>
             <a href="awards.html">Awards</a>
             <a href="logistics.html">Logistics</a>
-            <a href="symposium.html">Sightseeing</a>
+            <a href="sightseeing.html">Sightseeing</a>
             <a href="sponsors.html">Sponsors</a>
             <a href="people.html">People</a>
 
-    </nav>
+        </nav>
 
-</header>
+    </header>
 
+
+    <!-- Main Content -->
     <main class="inner">
 
+        <!-- Page Title Section -->
         <div class="page-title">
-            <p class="eyebrow">SUMMER SCHOOL 2026</p>
+
+            <p class="eyebrow">SUMMER SCHOOL 2027</p>
+
             <h1>Resources</h1>
-            <p>Replace the sample information below with confirmed event details.</p>
+
+            <p>
+                Preparatory learning materials and recommended lectures
+                for participants of M2IP 2027.
+            </p>
+
         </div>
 
+
+        <!-- Learning Resources Section -->
         <section class="content-section">
 
-            <h2>Learning Resources</h2>
+            <h2>Recommended Lecture Videos</h2>
 
             <p>
-                Useful materials for participants to prepare for and follow the
-                summer school.
+                Participants are encouraged to watch the following lectures
+                to develop a strong foundation in digital image processing,
+                its mathematical foundations, and image segmentation.
             </p>
 
-            <h3>Tutorials and Courses</h3>
+
+            <!-- 1. Digital Image Fundamentals -->
+
+            <h3>1. Digital Image Fundamentals</h3>
 
             <ul class="resource-list">
 
                 <li>
-                    <a href="https://www.youtube.com/">
-                        Foundational mathematics and linear algebra tutorials ↗
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Introduction to Digital Image Processing ↗
                     </a>
-                    <small>Online video resources</small>
+                    <small>NPTEL – Lecture 1</small>
                 </li>
 
                 <li>
-                    <a href="https://cs231n.stanford.edu/">
-                        Convolutional Neural Networks for Visual Recognition ↗
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Image Digitalisation, Sampling and Quantisation ↗
                     </a>
-                    <small>Stanford course materials</small>
+                    <small>NPTEL – Lecture 3</small>
                 </li>
 
                 <li>
-                    <a href="https://www.deeplearning.ai/">
-                        Deep Learning courses ↗
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Relationship Between Pixels ↗
                     </a>
-                    <small>Online courses and tutorials</small>
+                    <small>NPTEL – Lecture 7</small>
+                </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Image Formation – I ↗
+                    </a>
+                    <small>NPTEL – Lecture 11</small>
                 </li>
 
             </ul>
 
-            <h3>Videos and Talks</h3>
+
+            <!-- 2. Mathematical Foundations for Image Processing -->
+
+            <h3>2. Mathematical Foundations for Image Processing</h3>
 
             <ul class="resource-list">
+
                 <li>
-                    <a href="https://www.youtube.com/">
-                        Invited lectures and recorded talks ↗
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Signal Reconstruction from Samples: Convolution Concept ↗
                     </a>
-                    <small>Add event-specific recordings</small>
+                    <small>NPTEL – Lecture 4</small>
                 </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Relationship of Adjacency and Connected Components Labelling ↗
+                    </a>
+                    <small>NPTEL – Lecture 8</small>
+                </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Application of Distance Measures ↗
+                    </a>
+                    <small>NPTEL – Lecture 9</small>
+                </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Basic Transformations ↗
+                    </a>
+                    <small>NPTEL – Lecture 10</small>
+                </li>
+
             </ul>
 
-            <h3>Selected Papers</h3>
 
-            <p>
-                Add curated research papers grouped by topic, with full citation
-                details and publisher links.
-            </p>
+            <!-- 3. Fundamentals of Image Segmentation -->
 
-            <div class="callout">
-                <b>For participants</b>
+            <h3>3. Fundamentals of Image Segmentation</h3>
 
-                <p>
-                    Check copyright and access permissions before sharing course
-                    notes, papers or recorded lectures.
-                </p>
-            </div>
+            <ul class="resource-list">
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Different Approaches for Image Segmentation ↗
+                    </a>
+                    <small>NPTEL – Lecture 56</small>
+                </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Image Segmentation: Global Processing (Hough Transform) ↗
+                    </a>
+                    <small>NPTEL – Lecture 57</small>
+                </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Region-Based Segmentation and Thresholding Techniques ↗
+                    </a>
+                    <small>NPTEL – Lecture 58</small>
+                </li>
+
+                <li>
+                    <a href="https://www.nptel.ac.in/courses/117105079"
+                       target="_blank" rel="noopener noreferrer">
+                        Region Splitting and Merging Techniques ↗
+                    </a>
+                    <small>NPTEL – Lecture 59</small>
+                </li>
+
+            </ul>
 
         </section>
 
     </main>
+
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -145,7 +231,7 @@
             <h3>SUMMER SCHOOL 2027</h3>
 
             <p>
-                Department of Mathematics, School of Advanced Sciences, 
+                Department of Mathematics, School of Advanced Sciences,
                 <br>
                 VIT University, Vandalur - Kelambakkam Road,
                 <br>
