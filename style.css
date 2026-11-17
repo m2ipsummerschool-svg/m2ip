@@ -10,50 +10,54 @@
    HEADER SECTION
 ======================================== */
 
-/* Announcement Bar */
+/* =====================================
+   ANNOUNCEMENT BAR - SCROLLING TEXT
+===================================== */
 
-.announcement-bar {
+.notice {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 25px;
     width: 100%;
-    min-height: 70px;
-    padding: 12px 8%;
-    background: #edf7f6;
-    border-top: 2px solid var(--teal);
+    min-height: 75px;
+    padding: 15px 8%;
+    background: #eef7f6;
     overflow: hidden;
 }
 
-.announcement-label {
+.notice-label {
     flex-shrink: 0;
-    color: var(--teal);
+    color: #2b9a91;
     font-size: 16px;
     font-weight: 800;
     white-space: nowrap;
 }
 
-.announcement-marquee {
+.notice-marquee {
     flex: 1;
     min-width: 0;
     overflow: hidden;
 }
 
-.announcement-track {
+.notice-track {
     display: flex;
     width: max-content;
-    animation: announcement-scroll 18s linear infinite;
+    animation: notice-scroll 18s linear infinite;
+    will-change: transform;
 }
 
-.announcement-track span {
+.notice-track span {
+    display: block;
     flex-shrink: 0;
     padding-right: 100px;
-    color: var(--navy);
-    font-size: 21px;
+    color: #10243a;
+    font-size: 23px;
     font-weight: 800;
     white-space: nowrap;
 }
 
-@keyframes announcement-scroll {
+@keyframes notice-scroll {
     from {
         transform: translateX(0);
     }
@@ -63,49 +67,49 @@
     }
 }
 
-.announcement-link {
+.notice-link {
     flex-shrink: 0;
-    color: var(--blue);
-    font-size: 16px;
+    margin-left: 0 !important;
+    color: #176b87;
+    font-size: 15px;
     font-weight: 700;
-    text-decoration: none;
     white-space: nowrap;
 }
 
-.announcement-link:hover {
-    color: var(--teal);
+.notice-link:hover {
+    color: #2b9a91;
 }
 
-/* Pause scrolling when hovered */
-.announcement-marquee:hover .announcement-track {
+.notice-marquee:hover .notice-track {
     animation-play-state: paused;
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 780px) {
 
-    .announcement-bar {
-        gap: 12px;
-        padding: 12px 15px;
-        flex-wrap: wrap;
+    .notice {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        padding: 15px 20px;
     }
 
-    .announcement-label {
+    .notice-label {
         font-size: 13px;
     }
 
-    .announcement-marquee {
-        flex-basis: 100%;
-        order: 3;
+    .notice-link {
+        font-size: 12px;
     }
 
-    .announcement-track span {
-        font-size: 17px;
+    .notice-marquee {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
     }
 
-    .announcement-link {
-        margin-left: auto;
-        font-size: 13px;
+    .notice-track span {
+        font-size: 19px;
     }
 }
 /* M2IP 2027 Circular Date Card - Text Alignment Fix */
