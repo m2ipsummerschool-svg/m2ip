@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentors | Summer School 2027</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .mentors-intro {
+            max-width: 950px;
+            margin: 0 auto 35px;
+            text-align: center;
+        }
+
+        .mentors-intro p {
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .mentor-table-wrapper {
+            overflow-x: auto;
+            margin: 30px auto;
+            max-width: 1100px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(16, 36, 58, 0.06);
+        }
+
+        .mentor-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .mentor-table th {
+            background: var(--navy);
+            color: white;
+            padding: 16px 20px;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+        }
+
+        .mentor-table td {
+            padding: 17px 20px;
+            border-bottom: 1px solid var(--line);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .mentor-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .mentor-table tr:hover {
+            background: var(--soft);
+        }
+
+        .mentor-name {
+            font-weight: 700;
+            color: var(--navy);
+            min-width: 240px;
+        }
+
+        .mentor-designation {
+            color: var(--ink);
+        }
+
+        .mentorship-section {
+            margin-top: 45px;
+            padding: 30px;
+            background: var(--soft);
+            border-radius: 12px;
+        }
+
+        .mentorship-section h2 {
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .mentorship-section p {
+            line-height: 1.8;
+        }
+
+        @media (max-width: 650px) {
+            .mentor-table th,
+            .mentor-table td {
+                padding: 12px;
+                font-size: 13px;
+            }
+
+            .mentor-name {
+                min-width: 180px;
+            }
+
+            .mentorship-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+
+        <div class="header-top">
+
+            <div class="vit-logo">
+                <img src="blue-vit-logo.png" alt="VIT Chennai Logo">
+            </div>
+
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <div class="m2ip-logo">
+                <img src="M2IP Logo.png" alt="M2IP Logo">
+            </div>
+
+        </div>
+
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav').classList.toggle('open')">
+            ☰
+        </button>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="mentors.html">Mentors</a>
+            <a href="program.html">Program</a>
+            <a href="resources.html">Resources</a>
+            <a href="awards.html">Awards</a>
+            <a href="logistics.html">Logistics</a>
+            <a href="symposium.html">Sightseeing</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="people.html">People</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="inner">
+
+        <div class="page-title">
+            <p class="eyebrow">GUIDANCE AND RESEARCH SUPPORT</p>
+            <h1>Our Mentors</h1>
+            <p>
+                Supporting participants in their journey from research ideas
+                to scholarly writing and book chapter preparation.
+            </p>
+        </div>
+
+
+        <!-- Introduction -->
+        <section class="content-section">
+
+            <div class="mentors-intro">
+
+                <h2>Research Mentorship</h2>
+
+                <p>
+                    The Summer School provides an opportunity for participants
+                    to receive research guidance from experienced faculty members.
+                    The mentors will help students understand the research process,
+                    identify and develop research problems, explore appropriate
+                    methodologies, and organise their findings into a structured
+                    scholarly contribution.
+                </p>
+
+                <p>
+                    Through this mentorship, participants will be guided in
+                    developing their research work and preparing it in the form
+                    of a book chapter, with an emphasis on research writing,
+                    presentation, and academic standards.
+                </p>
+
+            </div>
+
+
+            <!-- Mentor List -->
+            <div class="section-heading">
+                <p class="eyebrow">ACADEMIC GUIDANCE</p>
+                <h2>Meet Our Mentors</h2>
+            </div>
+
+            <div class="mentor-table-wrapper">
+
+                <table class="mentor-table">
+
+                    <thead>
+                        <tr>
+                            <th>NAME OF THE MENTOR</th>
+                            <th>DESIGNATION</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td class="mentor-name">Dr. M. KALIYAPPAN</td>
+                            <td class="mentor-designation">
+                                Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. A. DAVID MAXIM GURURAJ</td>
+                            <td class="mentor-designation">
+                                Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. S. UMA MAHESWARI</td>
+                            <td class="mentor-designation">
+                                Associate Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. G. HANNAH GRACE</td>
+                            <td class="mentor-designation">
+                                Associate Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. S. DHANASEKAR</td>
+                            <td class="mentor-designation">
+                                Associate Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. A. MANIVANNAN</td>
+                            <td class="mentor-designation">
+                                Associate Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. D. SARASWATHI</td>
+                            <td class="mentor-designation">
+                                Associate Professor<br>
+                                Centre for Human Movement Analytics (CeHMA) - SCOPE
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. S. DEVI YAMINI</td>
+                            <td class="mentor-designation">
+                                Assistant Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. N. PADMAJA</td>
+                            <td class="mentor-designation">
+                                Assistant Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mentor-name">Dr. N. RAMESH BABU</td>
+                            <td class="mentor-designation">
+                                Assistant Professor<br>
+                                Department of Mathematics - SAS
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Mentorship Objective -->
+            <div class="mentorship-section">
+
+                <h2>From Research Ideas to Book Chapters</h2>
+
+                <p>
+                    The mentorship initiative aims to encourage participants
+                    to move beyond classroom learning and engage in structured
+                    research activities. With guidance from the mentors,
+                    students can work towards developing research ideas,
+                    understanding research methodologies, organising their
+                    findings, and preparing a well-structured book chapter.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div>
+            <h3>SUMMER SCHOOL 2027</h3>
+            <p>
+                Department of Mathematics, School of Advanced Sciences,
+                <br>
+                VIT University, Vandalur - Kelambakkam Road,
+                <br>
+                Chennai, Tamil Nadu, 600 127,
+                <br>
+                India.
+            </p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <a href="register.html">Registration</a>
+            <a href="program.html">Programme</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="mentors.html">Mentors</a>
+        </div>
+
+        <div>
+            <h4>Contact Us</h4>
+            <p>
+                Email: m2ipsummerschool@gmail.com
+                <br>
+                Phone: +91 87780 97050
+            </p>
+        </div>
+
+        <div class="copyright">
+            © 2027 Vellore Institute of Technology. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
