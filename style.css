@@ -9,6 +9,105 @@
 /* ========================================
    HEADER SECTION
 ======================================== */
+
+/* Announcement Bar */
+
+.announcement-bar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    min-height: 70px;
+    padding: 12px 8%;
+    background: #edf7f6;
+    border-top: 2px solid var(--teal);
+    overflow: hidden;
+}
+
+.announcement-label {
+    flex-shrink: 0;
+    color: var(--teal);
+    font-size: 16px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.announcement-marquee {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.announcement-track {
+    display: flex;
+    width: max-content;
+    animation: announcement-scroll 18s linear infinite;
+}
+
+.announcement-track span {
+    flex-shrink: 0;
+    padding-right: 100px;
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+@keyframes announcement-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.announcement-link {
+    flex-shrink: 0;
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.announcement-link:hover {
+    color: var(--teal);
+}
+
+/* Pause scrolling when hovered */
+.announcement-marquee:hover .announcement-track {
+    animation-play-state: paused;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .announcement-bar {
+        gap: 12px;
+        padding: 12px 15px;
+        flex-wrap: wrap;
+    }
+
+    .announcement-label {
+        font-size: 13px;
+    }
+
+    .announcement-marquee {
+        flex-basis: 100%;
+        order: 3;
+    }
+
+    .announcement-track span {
+        font-size: 17px;
+    }
+
+    .announcement-link {
+        margin-left: auto;
+        font-size: 13px;
+    }
+}
 /* M2IP 2027 Circular Date Card - Text Alignment Fix */
 
 .date-card {
