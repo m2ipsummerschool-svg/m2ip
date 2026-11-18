@@ -88,17 +88,20 @@
             margin: 0 auto;
         }
 
-        /* Patrons: 3 + 2 + 2 layout */
-        .committee-section .committee-grid.patrons-grid {
-            display: grid !important;
-            grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
-            gap: 54px 24px;
-            justify-items: center;
-        }
+/* Patrons: 3 + 3 layout */
+.committee-section .committee-grid.patrons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 54px 36px;
+    justify-items: center;
+    align-items: start;
+}
 
-        .committee-section .committee-grid.patrons-grid .committee-card {
-            grid-column: span 2;
-        }
+.committee-section .committee-grid.patrons-grid .committee-card {
+    grid-column: auto;
+    width: 100%;
+    max-width: 330px;
+}
 
         /* Centre rows 2 and 3 */
         .committee-section .committee-grid.patrons-grid .committee-card:nth-child(4),
@@ -156,20 +159,16 @@
         }
 
         /* Tablet */
-        @media (max-width: 800px) {
-            .committee-section {
-                width: min(100% - 40px, 680px);
-            }
+@media (max-width: 800px) {
+    .committee-section {
+        width: min(100% - 40px, 680px);
+    }
 
-            .committee-grid,
-            .committee-section .committee-grid.patrons-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            }
-
-            .committee-section .committee-grid.patrons-grid .committee-card {
-                grid-column: auto !important;
-            }
-        }
+    .committee-grid,
+    .committee-section .committee-grid.patrons-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
 
         /* Mobile */
         @media (max-width: 540px) {
