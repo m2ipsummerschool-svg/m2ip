@@ -13,7 +13,30 @@
 /* =====================================
    ANNOUNCEMENT BAR - SCROLLING TEXT
 ===================================== */
+.patrons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
 
+.patrons-grid .committee-card {
+    width: 100%;
+    max-width: 280px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .patrons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .patrons-grid {
+        grid-template-columns: 1fr;
+    }
+}
 .notice {
     display: flex;
     flex-direction: row;
