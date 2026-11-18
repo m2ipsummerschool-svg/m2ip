@@ -1104,3 +1104,30 @@
     }
 
 }
+/* FIX: Patrons layout - exactly 3 cards per row */
+.committee-section .committee-grid.patrons-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 30px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.committee-section .patrons-grid .committee-card {
+    width: 100%;
+    max-width: 280px;
+}
+
+/* Keep 3 columns for the Patrons section */
+@media (min-width: 601px) {
+    .committee-section .committee-grid.patrons-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .committee-section .committee-grid.patrons-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
