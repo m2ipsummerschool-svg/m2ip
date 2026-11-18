@@ -89,6 +89,7 @@
         }
 
 /* Patrons: 3 + 3 layout */
+/* Patrons: 3 people in each row */
 .committee-section .committee-grid.patrons-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -102,17 +103,6 @@
     width: 100%;
     max-width: 330px;
 }
-
-        /* Centre rows 2 and 3 */
-        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(4),
-        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(6) {
-            grid-column: 2 / span 2;
-        }
-
-        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(5),
-        .committee-section .committee-grid.patrons-grid .committee-card:nth-child(7) {
-            grid-column: 4 / span 2;
-        }
 
         /* Scientific Committee: 2 + 2 */
         .committee-section .committee-grid.scientific-grid {
