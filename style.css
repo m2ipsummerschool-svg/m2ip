@@ -3211,3 +3211,76 @@
 
 }
 
+/* SDG Card */
+.sdg-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sdg-card .card-icon {
+    margin-bottom: 15px;
+}
+
+.sdg-card h3 {
+    margin-bottom: 20px;
+}
+
+/* SDG Logo Grid */
+.sdg-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+.sdg-logo-grid img {
+    display: block;
+    width: 100%;
+    max-width: 65px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Centre the last three logos */
+.sdg-logo-grid img:nth-child(5) {
+    grid-column: 1 / 2;
+}
+
+.sdg-logo-grid img:nth-child(6) {
+    grid-column: 2 / 3;
+}
+
+.sdg-logo-grid img:nth-child(7) {
+    grid-column: 3 / 4;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .sdg-logo-grid {
+        max-width: 300px;
+        gap: 10px;
+    }
+
+    .sdg-logo-grid img {
+        max-width: 60px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+    .sdg-logo-grid {
+        max-width: 280px;
+        gap: 8px;
+    }
+
+    .sdg-logo-grid img {
+        max-width: 55px;
+    }
+}
