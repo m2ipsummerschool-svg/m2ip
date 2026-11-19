@@ -10,167 +10,60 @@
 
 
 /* =========================================
-   SDG LOGOS - FIXED SIZE AND CENTRED
+   SDG LOGOS - UNIFORM SIZE
 ========================================= */
 
 .sdg-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 0;
 }
 
 .sdg-logo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 76px);
+    grid-template-columns: repeat(4, 100px);
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     width: 100%;
 }
 
 .sdg-logo-grid img {
-    display: block;
-    width: 76px;
-    height: 76px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin: 0;
+    display: block;
 }
 
-/* Centre the seventh logo */
-.sdg-logo-grid img:nth-child(7) {
-    grid-column: 2;
+/* Tablet */
+@media (max-width: 900px) {
+    .sdg-logo-grid {
+        grid-template-columns: repeat(4, 85px);
+        gap: 12px;
+    }
+
+    .sdg-logo-grid img {
+        width: 85px;
+        height: 85px;
+    }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
     .sdg-logo-grid {
-        grid-template-columns: repeat(3, 76px);
-        gap: 10px;
+        grid-template-columns: repeat(3, 75px);
+        gap: 12px;
+    }
+
+    .sdg-logo-grid img {
+        width: 75px;
+        height: 75px;
     }
 }
 /* ========================================
    HEADER SECTION
 ======================================== */
-/* =========================================
-   PROGRAMME OUTCOMES - 3 + 2 CARD LAYOUT
-========================================= */
 
-.outcomes-cards {
-
-    display: grid;
-
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-
-    gap: 30px;
-
-}
-
-
-/* First three cards */
-
-.outcomes-cards > .card:nth-child(1),
-.outcomes-cards > .card:nth-child(2),
-.outcomes-cards > .card:nth-child(3) {
-
-    grid-column: span 2;
-
-}
-
-
-/* Fourth card - centred in second row */
-
-.outcomes-cards > .card:nth-child(4) {
-
-    grid-column: 2 / span 2;
-
-}
-
-
-/* Fifth card - centred in second row */
-
-.outcomes-cards > .card:nth-child(5) {
-
-    grid-column: 4 / span 2;
-
-}
-
-
-/* Ensure all cards have consistent height behaviour */
-
-.outcomes-cards > .card {
-
-    width: 100%;
-
-    height: 100%;
-
-}
-
-
-/* =========================================
-   TABLET RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 900px) {
-
-    .outcomes-cards {
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    }
-
-    .outcomes-cards > .card:nth-child(1),
-    .outcomes-cards > .card:nth-child(2),
-    .outcomes-cards > .card:nth-child(3),
-    .outcomes-cards > .card:nth-child(4),
-    .outcomes-cards > .card:nth-child(5) {
-
-        grid-column: auto;
-
-    }
-
-    /* Centre the last card */
-
-    .outcomes-cards > .card:nth-child(5) {
-
-        grid-column: 1 / -1;
-
-        width: calc(50% - 15px);
-
-        justify-self: center;
-
-    }
-
-}
-
-
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-========================================= */
-
-@media (max-width: 600px) {
-
-    .outcomes-cards {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-    }
-
-    .outcomes-cards > .card:nth-child(1),
-    .outcomes-cards > .card:nth-child(2),
-    .outcomes-cards > .card:nth-child(3),
-    .outcomes-cards > .card:nth-child(4),
-    .outcomes-cards > .card:nth-child(5) {
-
-        grid-column: 1;
-
-        width: 100%;
-
-    }
-
-}
 /* =========================================
    BOOK CHAPTER HERO WITH CRC PRESS LOGO
 ========================================= */
