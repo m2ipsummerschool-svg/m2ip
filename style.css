@@ -10,7 +10,325 @@
    HEADER SECTION
 ======================================== */
 
+/* =========================================
+   BOOK CHAPTER HERO WITH CRC PRESS LOGO
+========================================= */
 
+.bookchapter-hero {
+
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        #123d73,
+        #1c5b9e,
+        #287bb4
+    );
+
+    color: #ffffff;
+
+    padding: 55px 45px;
+
+    margin: 30px 0 50px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+/* Hero Layout */
+
+.bookchapter-hero-layout {
+
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   CRC PRESS LOGO
+========================================= */
+
+.bookchapter-logo-container {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.crc-logo-panel {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.crc-press-logo {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 280px;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.bookchapter-hero-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+/* Eyebrow */
+
+.bookchapter-hero .eyebrow {
+
+    color: #c6e2ff;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* Main Title */
+
+.bookchapter-hero h1 {
+
+    color: #ffffff;
+
+    font-size: clamp(34px, 4vw, 48px);
+
+    line-height: 1.2;
+
+    margin: 0 0 25px;
+
+}
+
+
+/* Subtitle */
+
+.bookchapter-hero h2 {
+
+    color: #ffffff;
+
+    font-size: clamp(25px, 3vw, 36px);
+
+    line-height: 1.4;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* Tagline */
+
+.bookchapter-tagline {
+
+    color: #f4d68a;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    margin: 0 auto 25px;
+
+}
+
+
+/* Introductory Content */
+
+.bookchapter-intro {
+
+    color: #f1f6fc;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .bookchapter-hero-layout {
+
+        grid-template-columns: 240px 1fr;
+
+        gap: 30px;
+
+    }
+
+    .crc-logo-panel {
+
+        padding: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .bookchapter-hero {
+
+        padding: 40px 25px;
+
+    }
+
+    .bookchapter-hero-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+    .bookchapter-logo-container {
+
+        max-width: 300px;
+
+        margin: 0 auto;
+
+    }
+
+    .crc-logo-panel {
+
+        padding: 25px;
+
+    }
+
+    .bookchapter-hero-content {
+
+        text-align: center;
+
+    }
+
+    .bookchapter-hero h1 {
+
+        font-size: 32px;
+
+    }
+
+    .bookchapter-hero h2 {
+
+        font-size: 25px;
+
+    }
+
+    .bookchapter-tagline {
+
+        font-size: 17px;
+
+    }
+
+    .bookchapter-intro {
+
+        font-size: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .bookchapter-hero {
+
+        padding: 30px 20px;
+
+    }
+
+    .bookchapter-logo-container {
+
+        max-width: 240px;
+
+    }
+
+    .crc-logo-panel {
+
+        padding: 18px;
+
+    }
+
+    .bookchapter-hero h1 {
+
+        font-size: 29px;
+
+    }
+
+    .bookchapter-hero h2 {
+
+        font-size: 23px;
+
+    }
+
+    .bookchapter-tagline {
+
+        font-size: 16px;
+
+    }
+
+}
 /* =========================================
    CALL FOR BOOK CHAPTERS
    M2IP SUMMER SCHOOL 2027
