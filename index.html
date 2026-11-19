@@ -494,7 +494,76 @@
         </div>
 
     </footer>
+<script>
 
+/* =========================================
+   M2IP 2027 REGISTRATION COUNTDOWN
+========================================= */
+
+// Registration Deadline: 30 December 2026, 11:59 PM IST
+const registrationDeadline = new Date("2026-12-30T23:59:59+05:30");
+
+
+function updateCountdown() {
+
+    const now = new Date();
+
+    // Before the registration deadline
+    if (now < registrationDeadline) {
+
+        const difference = registrationDeadline - now;
+
+        const days = Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (difference / (1000 * 60 * 60)) % 24
+        );
+
+        const minutes = Math.floor(
+            (difference / (1000 * 60)) % 60
+        );
+
+        const seconds = Math.floor(
+            (difference / 1000) % 60
+        );
+
+        document.getElementById("days").textContent =
+            String(days).padStart(2, "0");
+
+        document.getElementById("hours").textContent =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("minutes").textContent =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("seconds").textContent =
+            String(seconds).padStart(2, "0");
+
+    }
+
+    // After the registration deadline
+    else {
+
+        document.getElementById("countdown").innerHTML = `
+            <div class="countdown-status">
+                Registration Closed!
+            </div>
+        `;
+
+    }
+
+}
+
+
+// Update immediately
+updateCountdown();
+
+// Update every second
+setInterval(updateCountdown, 1000);
+
+</script>
 </body>
 
 </html>
