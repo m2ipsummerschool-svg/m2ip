@@ -9,7 +9,193 @@
 /* ========================================
    HEADER SECTION
 ======================================== */
+/* =========================================
+   SUMMER SCHOOL COUNTDOWN
+========================================= */
 
+.countdown-section {
+    width: min(100% - 40px, 1400px);
+    margin: 35px auto;
+    border: 1px solid #d5dce5;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+/* Countdown Header */
+
+.countdown-header {
+    background: #164b91;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Main Countdown Container */
+
+.countdown-container {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    min-height: 240px;
+}
+
+/* Left Title Panel */
+
+.countdown-title {
+    background: #d0dbe8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.countdown-title h2 {
+    color: #24384f;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Timer Section */
+
+.countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 30px 20px;
+    gap: 10px;
+}
+
+/* Individual Countdown Items */
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Countdown Numbers */
+
+.countdown-number {
+    font-size: clamp(50px, 7vw, 90px);
+    font-weight: 500;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Individual Number Colors */
+
+.countdown-number.days {
+    color: #4776c5;
+}
+
+.countdown-number.hours {
+    color: #5658df;
+}
+
+.countdown-number.minutes {
+    color: #ff9800;
+}
+
+.countdown-number.seconds {
+    color: #a239d6;
+}
+
+/* Labels */
+
+.countdown-label {
+    color: #111111;
+    font-size: clamp(18px, 2vw, 26px);
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Countdown Status */
+
+.countdown-status {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #164b91;
+    padding: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVE COUNTDOWN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .countdown-container {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-title {
+        padding: 20px;
+    }
+
+    .countdown-title h2 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .countdown-timer {
+        padding: 25px 10px;
+    }
+
+    .countdown-number {
+        font-size: clamp(40px, 10vw, 65px);
+    }
+
+    .countdown-label {
+        font-size: 16px;
+    }
+
+    .countdown-header {
+        font-size: 19px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .countdown-section {
+        width: calc(100% - 24px);
+        margin: 25px auto;
+    }
+
+    .countdown-timer {
+        gap: 5px;
+        padding: 20px 5px;
+    }
+
+    .countdown-number {
+        font-size: 38px;
+    }
+
+    .countdown-label {
+        font-size: 13px;
+    }
+
+    .countdown-header {
+        font-size: 16px;
+        padding: 15px 10px;
+    }
+
+    .countdown-title h2 {
+        font-size: 22px;
+    }
+
+}
 /* =====================================
    ANNOUNCEMENT BAR - SCROLLING TEXT
 ===================================== */
