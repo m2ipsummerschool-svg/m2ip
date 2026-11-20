@@ -10,6 +10,82 @@
 
 
 
+/* =====================================
+   NEXT AND PREVIOUS PAGE NAVIGATION
+===================================== */
+
+.page-navigation {
+    max-width: 1150px;
+    margin: 45px auto 55px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-nav-btn {
+    display: inline-block;
+
+    padding: 13px 27px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+/* PREVIOUS BUTTON */
+
+.previous-btn {
+    background: #eaf8fc;
+    color: #163b68;
+    border: 1px solid #cceaf5;
+}
+
+.previous-btn:hover {
+    background: #d7f1fa;
+    transform: translateX(-4px);
+}
+
+
+/* NEXT BUTTON */
+
+.next-btn {
+    background: #163b68;
+    color: #ffffff;
+    border: 1px solid #163b68;
+}
+
+.next-btn:hover {
+    background: #55b9e8;
+    border-color: #55b9e8;
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    .page-navigation {
+        padding: 0 12px;
+    }
+
+    .page-nav-btn {
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+
+}
+
 
 /* =====================================
    DAILY SESSION SCHEDULE
