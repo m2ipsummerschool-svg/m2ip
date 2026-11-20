@@ -6,6 +6,188 @@
 @media(max-width:780px){.site-header{align-items:center}.menu-toggle{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;padding:18px 25px;box-shadow:0 10px 20px #10243a18;flex-direction:column;align-items:flex-start}.nav.open{display:flex}.hero{grid-template-columns:1fr;padding:55px 26px}.hero-side{display:none}.notice{align-items:flex-start;flex-direction:column;gap:6px}.notice a{margin-left:0}.intro-grid{grid-template-columns:1fr;gap:25px}.cards.three{grid-template-columns:1fr}.section{padding:48px 26px}.series{align-items:flex-start;flex-direction:column}.footer{grid-template-columns:1fr 1fr}.copyright{grid-column:1/-1}.page-title{padding:40px 26px}.page-title h1{font-size:32px}.content-section{padding:35px 22px 55px}.sponsor-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.brand strong{font-size:12px}.brand small{font-size:10px}.footer{grid-template-columns:1fr}.copyright{grid-column:auto}.hero h1{font-size:38px}.hero-meta{flex-direction:column;gap:8px}}
 
+
+
+/* ================================
+   SPEAKERS SECTION
+================================ */
+
+.speakers-section {
+    width: 100%;
+    padding: 100px 0 80px;
+    background: linear-gradient(180deg, #effcff, #d9f7ff);
+}
+
+/* SPEAKERS GRID */
+
+.speakers-container {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    row-gap: 145px;
+}
+
+/* SPEAKER CARD */
+
+.speaker-card {
+    background: #ffffff;
+    border-radius: 60px;
+    text-align: center;
+
+    position: relative;
+    padding: 195px 25px 45px;
+
+    min-height: 590px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(20, 65, 100, 0.10);
+}
+
+/* SPEAKER IMAGE */
+
+.speaker-image {
+    width: 245px;
+    height: 245px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SPEAKER NAME */
+
+.speaker-card h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #10234f;
+    line-height: 1.35;
+    margin-bottom: 15px;
+}
+
+/* DESIGNATION */
+
+.speaker-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #55b9e8;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* SPEAKER DESCRIPTION */
+
+.speaker-card p {
+    font-size: 19px;
+    font-weight: 300;
+    color: #7b8492;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* SOCIAL ICONS */
+
+.speaker-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.speaker-social a {
+    color: #b5b5b5;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.speaker-social a:hover {
+    color: #55b9e8;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .speakers-container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 25px;
+        row-gap: 130px;
+    }
+
+    .speaker-card h2 {
+        font-size: 30px;
+    }
+
+    .speaker-card h3 {
+        font-size: 21px;
+    }
+
+    .speaker-image {
+        width: 210px;
+        height: 210px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .speakers-section {
+        padding: 90px 0 70px;
+    }
+
+    .speakers-container {
+        grid-template-columns: 1fr;
+        row-gap: 120px;
+        padding: 0 15px;
+    }
+
+    .speaker-card {
+        min-height: 540px;
+        padding: 165px 22px 40px;
+        border-radius: 45px;
+    }
+
+    .speaker-image {
+        width: 200px;
+        height: 200px;
+        top: -75px;
+    }
+
+    .speaker-card h2 {
+        font-size: 29px;
+    }
+
+    .speaker-card h3 {
+        font-size: 19px;
+    }
+
+    .speaker-card p {
+        font-size: 17px;
+    }
+}
+
+
+
 /* =========================================
    SDG LOGOS - UNIFORM SIZE
 ========================================= */
