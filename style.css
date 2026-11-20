@@ -10,17 +10,19 @@
 
 
 
-/* =====================================
-   PROGRAMME SECTION
-===================================== */
+
+/* ==========================================
+   PROGRAMME PAGE
+========================================== */
 
 .programme-section {
     max-width: 1250px;
     margin: 0 auto;
-    padding: 50px 20px 80px;
+    padding: 40px 20px 80px;
 }
 
-/* HEADING */
+
+/* PROGRAMME HEADING */
 
 .programme-heading {
     text-align: center;
@@ -28,170 +30,63 @@
 }
 
 .programme-heading h2 {
+    font-size: 30px;
     color: #10234f;
-    font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .programme-heading p {
-    color: #7b8492;
-    font-size: 17px;
-}
-
-
-/* =====================================
-   MODULE TABS
-===================================== */
-
-.module-tabs {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
-    margin-bottom: 35px;
-}
-
-.module-tab {
-    border: 1px solid #d8e8f4;
-    background: #ffffff;
-
-    color: #16365e;
-
-    padding: 17px 10px;
-
     font-size: 16px;
-    font-weight: 700;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    transition: all 0.3s ease;
-}
-
-.module-tab:hover {
-    background: #e5f6ff;
-    border-color: #55b9e8;
-    color: #164477;
-}
-
-.module-tab.active {
-    background: #163b68;
-    color: #ffffff;
-    border-color: #163b68;
-
-    box-shadow: 0 5px 15px rgba(22,59,104,0.15);
+    color: #718096;
+    line-height: 1.7;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 
-/* =====================================
-   MODULE CONTENT
-===================================== */
-
-.module-content {
-    display: none;
-
-    background: #ffffff;
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    box-shadow: 0 8px 25px rgba(20,65,100,0.07);
-
-    animation: moduleFade 0.35s ease;
-}
-
-.module-content.active {
-    display: block;
-}
-
-@keyframes moduleFade {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* MODULE TITLE */
-
-.module-title {
-    margin-bottom: 25px;
-
-    border-left: 5px solid #55b9e8;
-    padding-left: 18px;
-}
-
-.module-title span {
-    color: #55b9e8;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.module-title h2 {
-    color: #10234f;
-
-    font-size: 27px;
-
-    margin-top: 7px;
-    text-transform: capitalize;
-}
-
-
-/* =====================================
+/* ==========================================
    SYLLABUS TABLE
-===================================== */
+========================================== */
 
 .syllabus-table-wrapper {
     width: 100%;
     overflow-x: auto;
+
+    border: 1px solid #d5eaf5;
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 25px rgba(20,65,100,0.07);
 }
 
 .syllabus-table {
     width: 100%;
-
     border-collapse: collapse;
-
-    border: 1px solid #163b68;
     table-layout: fixed;
 }
 
-.syllabus-table th {
-    background: #dceeff;
 
-    color: #163b68;
+/* COLUMN WIDTHS */
 
-    font-size: 16px;
-    font-weight: 800;
-
-    padding: 13px;
-
-    border: 1px solid #163b68;
-    text-align: center;
+.syllabus-table .module-heading,
+.syllabus-table .module-number {
+    width: 10%;
 }
 
-.syllabus-table th:first-child {
-    width: 85%;
+.syllabus-table .topics-heading {
+    width: 80%;
 }
 
-.syllabus-table th.hours-heading {
-    width: 15%;
+.syllabus-table .hours-heading,
+.syllabus-table .hours-cell {
+    width: 10%;
 }
 
-.syllabus-table td {
-    border: 1px solid #163b68;
-    padding: 0;
-}
 
-.topic-name {
+/* TABLE HEADER */
+
+.syllabus-table thead th {
     background: #163b68;
 
     color: #ffffff;
@@ -199,31 +94,30 @@
     font-size: 16px;
     font-weight: 800;
 
-    padding: 10px 12px;
+    padding: 15px 8px;
 
-    text-transform: uppercase;
+    text-align: center;
+
+    border: 1px solid #d5eaf5;
 }
 
-.topic-description {
-    background: #f4faff;
 
-    color: #34465c;
+/* TABLE BODY */
 
-    font-size: 16px;
-
-    line-height: 1.7;
-
-    text-align: justify;
-
-    padding: 15px;
+.syllabus-table tbody td {
+    border: 1px solid #d5eaf5;
+    padding: 0;
 }
 
-.syllabus-table td.hours-cell {
-    background: #e9a1d6;
 
-    color: #10234f;
+/* MODULE NUMBER */
 
-    font-size: 25px;
+.syllabus-table .module-number {
+    background: #eaf8fc;
+
+    color: #163b68;
+
+    font-size: 23px;
     font-weight: 800;
 
     text-align: center;
@@ -231,71 +125,162 @@
 }
 
 
-/* =====================================
-   RESPONSIVE DESIGN
-===================================== */
+/* TOPIC CELL */
 
-@media (max-width: 900px) {
-
-    .module-tabs {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+.syllabus-table .topic-cell {
+    vertical-align: top;
 }
 
-@media (max-width: 600px) {
+
+/* TOPIC TITLE */
+
+.syllabus-table .topic-name {
+    background: #234b78;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.5;
+
+    padding: 10px 12px;
+
+    text-transform: uppercase;
+}
+
+
+/* TOPIC DESCRIPTION */
+
+.syllabus-table .topic-description {
+    background: #f5fbfe;
+
+    color: #52677c;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    text-align: justify;
+
+    padding: 12px;
+}
+
+
+/* LECTURE HOURS */
+
+.syllabus-table .hours-cell {
+    background: #e3f5fc;
+
+    color: #163b68;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* ==========================================
+   TOTAL HOURS
+========================================== */
+
+.syllabus-table tfoot td {
+    border: 1px solid #d5eaf5;
+    padding: 14px;
+}
+
+.syllabus-table .total-label {
+    background: #163b68;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    text-align: right;
+}
+
+.syllabus-table .total-hours {
+    background: #55b9e8;
+
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.syllabus-table tbody tr .topic-description,
+.syllabus-table tbody tr .module-number,
+.syllabus-table tbody tr .hours-cell {
+    transition: background 0.3s ease;
+}
+
+.syllabus-table tbody tr:hover .topic-description {
+    background: #eaf8fc;
+}
+
+.syllabus-table tbody tr:hover .module-number {
+    background: #d9f1fa;
+}
+
+.syllabus-table tbody tr:hover .hours-cell {
+    background: #d9f1fa;
+}
+
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 768px) {
 
     .programme-section {
-        padding: 35px 12px 60px;
+        padding: 30px 12px 60px;
     }
 
     .programme-heading h2 {
         font-size: 25px;
     }
 
-    .module-tabs {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 9px;
-    }
-
-    .module-tab {
+    .programme-heading p {
         font-size: 14px;
-        padding: 14px 5px;
     }
 
-    .module-content {
-        padding: 18px 12px;
-        border-radius: 14px;
+    .syllabus-table {
+        min-width: 650px;
     }
 
-    .module-title h2 {
-        font-size: 21px;
+    .syllabus-table .topic-name {
+        font-size: 14px;
     }
 
-    .syllabus-table th {
-        font-size: 13px;
-        padding: 10px 5px;
+    .syllabus-table .topic-description {
+        font-size: 14px;
     }
 
-    .syllabus-table th:first-child {
-        width: 78%;
+    .syllabus-table .module-number {
+        font-size: 20px;
     }
 
-    .syllabus-table th.hours-heading {
-        width: 22%;
+    .syllabus-table .hours-cell {
+        font-size: 20px;
     }
 
-    .topic-name {
-        font-size: 13px;
-    }
+}
 
-    .topic-description {
-        font-size: 13px;
-        padding: 10px;
-    }
+@media (max-width: 480px) {
 
-    .syllabus-table td.hours-cell {
-        font-size: 21px;
+    .programme-heading h2 {
+        font-size: 22px;
     }
 
 }
