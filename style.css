@@ -614,7 +614,53 @@
 
 }
 
+/* =========================================
+   CRC PRESS LOGO
+========================================= */
 
+.bookchapter-logo-container {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.crc-logo-panel {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.crc-press-logo {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 280px;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
 
 
 
