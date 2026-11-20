@@ -9,6 +9,612 @@
 
 
 
+
+/* =========================================
+   M2IP 2027 - SPONSORS PAGE
+========================================= */
+
+.sponsors-page {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 35px;
+    padding-bottom: 60px;
+    color: #263d56;
+}
+
+/* HERO SECTION */
+
+.sponsor-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 55px;
+    border-radius: 22px;
+    background: linear-gradient(125deg, #10234f, #163b68 65%, #28618d);
+    color: white;
+    box-shadow: 0 12px 35px rgba(16, 35, 79, 0.16);
+}
+
+.sponsor-hero::after {
+    content: "";
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    right: -90px;
+    top: -110px;
+    border: 55px solid rgba(255,255,255,0.07);
+    border-radius: 50%;
+}
+
+.sponsor-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+}
+
+.sponsor-tag {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 30px;
+    background: rgba(85,185,232,0.18);
+    color: #8edaff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.sponsor-hero h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    color: white;
+}
+
+.sponsor-hero h2 {
+    font-size: 21px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #bceaff;
+    margin-bottom: 25px;
+}
+
+.sponsor-hero p {
+    color: #e4eff9;
+    font-size: 15px;
+    line-height: 1.85;
+    margin-bottom: 14px;
+}
+
+.hero-programme {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 17px 20px;
+    margin-bottom: 22px;
+    border-left: 4px solid #55b9e8;
+    background: rgba(255,255,255,0.09);
+    border-radius: 5px;
+}
+
+.hero-programme strong {
+    color: white;
+    font-size: 16px;
+}
+
+.hero-programme span {
+    color: #c6e9fa;
+    font-size: 14px;
+}
+
+.sponsor-cta {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 25px;
+    background: #55b9e8;
+    color: #102c50;
+    border-radius: 7px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.sponsor-cta:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+/* COMMON SECTION STYLING */
+
+.sponsor-section {
+    padding: 65px 0 15px;
+}
+
+.sponsor-section-heading {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 35px;
+}
+
+.sponsor-section-heading > span,
+.impact-content > span,
+.contact-intro > span {
+    color: #1688ba;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sponsor-section-heading h2 {
+    color: #163b68;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.sponsor-section-heading p {
+    color: #718096;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* SUPPORT CARDS */
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.support-card {
+    background: #ffffff;
+    padding: 28px 25px;
+    border: 1px solid #dcecf5;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(22,59,104,0.06);
+    transition: 0.3s;
+}
+
+.support-card:hover {
+    transform: translateY(-6px);
+    border-color: #55b9e8;
+    box-shadow: 0 12px 25px rgba(22,59,104,0.12);
+}
+
+.support-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #eaf8fc;
+    color: #176b9e;
+    font-size: 25px;
+    margin-bottom: 19px;
+}
+
+.support-card h3 {
+    color: #163b68;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.support-card p {
+    color: #65778a;
+    font-size: 14px;
+    line-height: 1.75;
+    margin: 0;
+}
+
+
+/* PARTNERSHIP */
+
+.partnership-section {
+    margin-top: 25px;
+}
+
+.partnership-box {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.partnership-text {
+    padding: 30px;
+    background: #f4faff;
+    border: 1px solid #e0edf6;
+    border-radius: 14px;
+}
+
+.partnership-text p {
+    color: #52677c;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.partnership-text p:last-child {
+    margin-bottom: 0;
+}
+
+.partnership-highlight {
+    padding: 30px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #e3f5fc, #d7effa);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight-icon {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.partnership-highlight h3 {
+    color: #163b68;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.partnership-highlight p {
+    color: #52677c;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+
+/* RECOGNITION */
+
+.recognition-section {
+    background: #f5fbfe;
+    padding: 55px 30px;
+    border-radius: 18px;
+    margin-top: 55px;
+}
+
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.recognition-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0edf6;
+    border-radius: 10px;
+}
+
+.recognition-item span {
+    min-width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #163b68;
+    color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.recognition-item p {
+    color: #52677c;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* RESEARCH IMPACT */
+
+.research-impact {
+    margin-top: 65px;
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    gap: 35px;
+    align-items: center;
+    background: linear-gradient(120deg, #163b68, #234b78);
+    border-radius: 18px;
+    color: white;
+}
+
+.impact-content > span {
+    color: #8edaff;
+}
+
+.impact-content h2 {
+    color: white;
+    font-size: 28px;
+    line-height: 1.35;
+    margin: 12px 0 18px;
+}
+
+.impact-content p {
+    color: #e0edf7;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.impact-stat {
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(255,255,255,0.35);
+    background: rgba(255,255,255,0.09);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.impact-stat strong {
+    font-size: 58px;
+    color: #8edaff;
+    line-height: 1;
+}
+
+.impact-stat span {
+    font-size: 12px;
+    color: white;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+/* TRANSPARENCY */
+
+.transparency-section {
+    padding-bottom: 30px;
+}
+
+.transparency-box {
+    padding: 15px 30px;
+    border: 1px solid #dcecf5;
+    border-radius: 14px;
+    background: white;
+}
+
+.transparency-item {
+    display: flex;
+    gap: 18px;
+    padding: 22px 0;
+    border-bottom: 1px solid #e8f0f5;
+}
+
+.transparency-item:last-child {
+    border-bottom: none;
+}
+
+.transparency-item > span {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e1f5ed;
+    color: #18865d;
+    font-weight: 900;
+}
+
+.transparency-item h3 {
+    color: #163b68;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.transparency-item p {
+    color: #65778a;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* CONTACT SECTION */
+
+.sponsor-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    padding: 45px;
+    margin-top: 55px;
+    background: #eaf8fc;
+    border-radius: 18px;
+}
+
+.contact-intro h2 {
+    color: #163b68;
+    font-size: 32px;
+    margin: 12px 0 18px;
+}
+
+.contact-intro p {
+    color: #52677c;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.contact-card {
+    padding: 30px;
+    background: white;
+    border: 1px solid #dcecf5;
+    border-radius: 13px;
+    box-shadow: 0 8px 24px rgba(22,59,104,0.08);
+}
+
+.contact-card-top > span {
+    color: #1688ba;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+.contact-card h3 {
+    color: #163b68;
+    font-size: 22px;
+    margin: 13px 0;
+}
+
+.contact-card-top p {
+    color: #65778a;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 3px 0;
+}
+
+.contact-details {
+    border-top: 1px solid #e3edf4;
+    margin-top: 20px;
+    padding-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contact-details span {
+    color: #718096;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-details a {
+    color: #1688ba;
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-button {
+    display: block;
+    text-align: center;
+    margin-top: 23px;
+    padding: 15px 18px;
+    border-radius: 7px;
+    background: #163b68;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background: #28618d;
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 850px) {
+
+    .support-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partnership-box {
+        grid-template-columns: 1fr;
+    }
+
+    .research-impact {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-stat {
+        width: 150px;
+        height: 150px;
+        margin: auto;
+    }
+
+    .sponsor-contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .sponsors-page {
+        padding: 20px 15px 40px;
+    }
+
+    .sponsor-hero {
+        padding: 38px 23px;
+    }
+
+    .sponsor-hero h1 {
+        font-size: 30px;
+    }
+
+    .sponsor-hero h2 {
+        font-size: 17px;
+    }
+
+    .sponsor-section {
+        padding-top: 45px;
+    }
+
+    .sponsor-section-heading h2 {
+        font-size: 24px;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partnership-text,
+    .partnership-highlight {
+        padding: 23px;
+    }
+
+    .recognition-section {
+        padding: 35px 18px;
+    }
+
+    .recognition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-impact {
+        padding: 30px 23px;
+    }
+
+    .impact-content h2 {
+        font-size: 24px;
+    }
+
+    .transparency-box {
+        padding: 10px 18px;
+    }
+
+    .sponsor-contact {
+        padding: 28px 18px;
+    }
+
+    .contact-card {
+        padding: 23px;
+    }
+}
+
+
+
+
 /* =====================================
    SELECTED PARTICIPANTS MARQUEE
 ===================================== */
