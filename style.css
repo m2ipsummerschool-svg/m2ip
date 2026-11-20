@@ -44,6 +44,7 @@
 }
 
 
+
 /* ==========================================
    SYLLABUS TABLE
 ========================================== */
@@ -66,99 +67,63 @@
     table-layout: fixed;
 }
 
-
 /* COLUMN WIDTHS */
 
-.syllabus-table .module-heading,
-.syllabus-table .module-number {
-    width: 10%;
-}
-
 .syllabus-table .topics-heading {
-    width: 80%;
+    width: 85%;
 }
 
 .syllabus-table .hours-heading,
 .syllabus-table .hours-cell {
-    width: 10%;
+    width: 15%;
 }
-
 
 /* TABLE HEADER */
 
 .syllabus-table thead th {
     background: #163b68;
-
     color: #ffffff;
 
     font-size: 16px;
     font-weight: 800;
 
     padding: 15px 8px;
-
     text-align: center;
 
     border: 1px solid #d5eaf5;
 }
 
-
-/* TABLE BODY */
+/* TABLE CELLS */
 
 .syllabus-table tbody td {
     border: 1px solid #d5eaf5;
     padding: 0;
 }
 
-
-/* MODULE NUMBER */
-
-.syllabus-table .module-number {
-    background: #eaf8fc;
-
-    color: #163b68;
-
-    font-size: 23px;
-    font-weight: 800;
-
-    text-align: center;
-    vertical-align: middle;
-}
-
-
-/* TOPIC CELL */
-
 .syllabus-table .topic-cell {
     vertical-align: top;
 }
-
 
 /* TOPIC TITLE */
 
 .syllabus-table .topic-name {
     background: #234b78;
-
     color: #ffffff;
 
     font-size: 15px;
     font-weight: 800;
-
     line-height: 1.5;
 
     padding: 10px 12px;
-
-    text-transform: uppercase;
 }
-
 
 /* TOPIC DESCRIPTION */
 
 .syllabus-table .topic-description {
     background: #f5fbfe;
-
     color: #52677c;
 
     font-size: 15px;
-
     line-height: 1.65;
 
     text-align: justify;
@@ -166,12 +131,10 @@
     padding: 12px;
 }
 
-
-/* LECTURE HOURS */
+/* HOURS */
 
 .syllabus-table .hours-cell {
     background: #e3f5fc;
-
     color: #163b68;
 
     font-size: 23px;
@@ -181,10 +144,7 @@
     vertical-align: middle;
 }
 
-
-/* ==========================================
-   TOTAL HOURS
-========================================== */
+/* TOTAL HOURS */
 
 .syllabus-table tfoot td {
     border: 1px solid #d5eaf5;
@@ -193,7 +153,6 @@
 
 .syllabus-table .total-label {
     background: #163b68;
-
     color: #ffffff;
 
     font-size: 16px;
@@ -204,7 +163,6 @@
 
 .syllabus-table .total-hours {
     background: #55b9e8;
-
     color: #ffffff;
 
     font-size: 22px;
@@ -213,13 +171,9 @@
     text-align: center;
 }
 
-
-/* ==========================================
-   HOVER EFFECT
-========================================== */
+/* HOVER EFFECT */
 
 .syllabus-table tbody tr .topic-description,
-.syllabus-table tbody tr .module-number,
 .syllabus-table tbody tr .hours-cell {
     transition: background 0.3s ease;
 }
@@ -228,35 +182,16 @@
     background: #eaf8fc;
 }
 
-.syllabus-table tbody tr:hover .module-number {
-    background: #d9f1fa;
-}
-
 .syllabus-table tbody tr:hover .hours-cell {
     background: #d9f1fa;
 }
 
-
-/* ==========================================
-   RESPONSIVE DESIGN
-========================================== */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
-    .programme-section {
-        padding: 30px 12px 60px;
-    }
-
-    .programme-heading h2 {
-        font-size: 25px;
-    }
-
-    .programme-heading p {
-        font-size: 14px;
-    }
-
     .syllabus-table {
-        min-width: 650px;
+        min-width: 600px;
     }
 
     .syllabus-table .topic-name {
@@ -267,24 +202,11 @@
         font-size: 14px;
     }
 
-    .syllabus-table .module-number {
-        font-size: 20px;
-    }
-
     .syllabus-table .hours-cell {
         font-size: 20px;
     }
 
 }
-
-@media (max-width: 480px) {
-
-    .programme-heading h2 {
-        font-size: 22px;
-    }
-
-}
-
 
 
 
