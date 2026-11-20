@@ -7,8 +7,26 @@
 @media(max-width:480px){.brand strong{font-size:12px}.brand small{font-size:10px}.footer{grid-template-columns:1fr}.copyright{grid-column:auto}.hero h1{font-size:38px}.hero-meta{flex-direction:column;gap:8px}}
 /* Brand Logo Container */
 
+/* Centre the final two speaker cards */
 
+@media (min-width: 1101px) {
 
+    .team-speaker-card:nth-child(7) {
+        grid-column: 1 / 2;
+        margin-left: 50%;
+    }
+
+    .team-speaker-card:nth-child(8) {
+        grid-column: 2 / 3;
+        margin-left: 50%;
+    }
+
+    .team-speaker-card:nth-child(7),
+    .team-speaker-card:nth-child(8) {
+        width: 100%;
+    }
+
+}
 /* =========================================
    SDG LOGOS - UNIFORM SIZE
 ========================================= */
