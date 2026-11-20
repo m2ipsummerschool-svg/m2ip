@@ -7,23 +7,38 @@
 @media(max-width:480px){.brand strong{font-size:12px}.brand small{font-size:10px}.footer{grid-template-columns:1fr}.copyright{grid-column:auto}.hero h1{font-size:38px}.hero-meta{flex-direction:column;gap:8px}}
 /* Brand Logo Container */
 
-/* Centre the final two speaker cards */
+@media (max-width: 1100px) {
 
-@media (min-width: 1101px) {
-
-    .team-speaker-card:nth-child(7) {
-        grid-column: 1 / 2;
-        margin-left: 50%;
+    .team-speakers-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 25px;
+        row-gap: 135px;
     }
 
-    .team-speaker-card:nth-child(8) {
-        grid-column: 2 / 3;
-        margin-left: 50%;
+    .team-speaker-card {
+        grid-column: auto;
     }
 
     .team-speaker-card:nth-child(7),
     .team-speaker-card:nth-child(8) {
-        width: 100%;
+        grid-column: auto;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .team-speakers-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        padding: 65px 20px 0;
+        row-gap: 135px;
+    }
+
+    .team-speaker-card,
+    .team-speaker-card:nth-child(7),
+    .team-speaker-card:nth-child(8) {
+        grid-column: 1;
     }
 
 }
