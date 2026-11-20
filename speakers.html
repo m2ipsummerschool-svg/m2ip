@@ -1,49 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Speakers | Summer School 2027</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
 
 <body>
 
-    <!-- Header Section -->
-<header class="site-header">
+    <!-- HEADER SECTION -->
+    <header class="site-header">
 
-    <!-- Top Header -->
-    <div class="header-top">
+        <div class="header-top">
 
-        <!-- VIT Logo - Left Side -->
-        <div class="vit-logo">
-            <img src="blue-vit-logo.png"
-                 alt="VIT Chennai Logo">
+            <!-- VIT LOGO -->
+            <div class="vit-logo">
+                <img src="blue-vit-logo.png"
+                     alt="VIT Chennai Logo">
+            </div>
+
+            <!-- SUMMER SCHOOL DETAILS -->
+            <div class="brand">
+                <strong>SUMMER SCHOOL 2027</strong>
+                <small>SAS / Department of Mathematics / VIT Chennai</small>
+            </div>
+
+            <!-- M2IP LOGO -->
+            <div class="m2ip-logo">
+                <img src="M2IP Logo.png"
+                     alt="M2IP Logo">
+            </div>
+
         </div>
 
-        <!-- Summer School Details - Centre -->
-        <div class="brand">
-            <strong>SUMMER SCHOOL 2027</strong>
-            <small>SAS / Department of Mathematics / VIT Chennai</small>
-        </div>
+        <!-- MOBILE NAVIGATION BUTTON -->
+        <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                onclick="document.querySelector('.nav').classList.toggle('open')">
+            ☰
+        </button>
 
-        <!-- M2IP Logo - Right Side -->
-        <div class="m2ip-logo">
-            <img src="M2IP Logo.png"
-                 alt="M2IP Logo">
-        </div>
-
-    </div>
-
-    <!-- Mobile Navigation Button -->
-    <button class="menu-toggle"
-            aria-label="Toggle navigation"
-            onclick="document.querySelector('.nav').classList.toggle('open')">
-        ☰
-    </button>
-
-    <!-- Navigation Bar -->
-    <nav class="nav">
+        <!-- NAVIGATION BAR -->
+        <nav class="nav">
 
             <a href="index.html">Home</a>
             <a href="register.html">Register</a>
@@ -58,191 +66,348 @@
             <a href="sponsors.html">Sponsors</a>
             <a href="people.html">People</a>
 
-    </nav>
+        </nav>
 
-</header>
+    </header>
 
 
-<main class="inner">
+    <!-- MAIN CONTENT -->
+    <main class="inner">
 
-    <!-- PAGE TITLE -->
-    <div class="page-title">
-        <p class="eyebrow">SUMMER SCHOOL 2027</p>
-        <h1>Speakers</h1>
-    </div>
-
-    <!-- SPEAKERS SECTION -->
-    <section class="speakers-section">
-
-        <div class="speakers-container">
-
-            <!-- SPEAKER 1 -->
-            <div class="speaker-card">
-                <img src="images/speaker1.jpg" alt="Speaker 1" class="speaker-image">
-
-                <h2>Dr. Speaker Name 1</h2>
-                <h3>Professor & Researcher</h3>
-
-                <p>
-                    An experienced academician and researcher
-                    with expertise in mathematics and
-                    computational sciences.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fas fa-link"></i></a>
-                    <a href="#"><i class="fab fa-google"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 2 -->
-            <div class="speaker-card">
-                <img src="images/speaker2.jpg" alt="Speaker 2" class="speaker-image">
-
-                <h2>Dr. Speaker Name 2</h2>
-                <h3>Associate Professor</h3>
-
-                <p>
-                    An accomplished researcher working
-                    in advanced mathematical modelling
-                    and scientific applications.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 3 -->
-            <div class="speaker-card">
-                <img src="images/speaker3.jpg" alt="Speaker 3" class="speaker-image">
-
-                <h2>Dr. Speaker Name 3</h2>
-                <h3>Research Scientist</h3>
-
-                <p>
-                    Specializing in emerging technologies,
-                    computational methods and
-                    interdisciplinary research.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 4 -->
-            <div class="speaker-card">
-                <img src="images/speaker4.jpg" alt="Speaker 4" class="speaker-image">
-
-                <h2>Dr. Speaker Name 4</h2>
-                <h3>Professor</h3>
-
-                <p>
-                    A dedicated academician contributing
-                    to innovative research and
-                    higher education.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fas fa-link"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 5 -->
-            <div class="speaker-card">
-                <img src="images/speaker5.jpg" alt="Speaker 5" class="speaker-image">
-
-                <h2>Dr. Speaker Name 5</h2>
-                <h3>Assistant Professor</h3>
-
-                <p>
-                    Engaged in research, teaching
-                    and the development of
-                    innovative scientific approaches.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 6 -->
-            <div class="speaker-card">
-                <img src="images/speaker6.jpg" alt="Speaker 6" class="speaker-image">
-
-                <h2>Dr. Speaker Name 6</h2>
-                <h3>Senior Researcher</h3>
-
-                <p>
-                    Working on advanced research
-                    methodologies and their
-                    real-world applications.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-google"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 7 -->
-            <div class="speaker-card">
-                <img src="images/speaker7.jpg" alt="Speaker 7" class="speaker-image">
-
-                <h2>Dr. Speaker Name 7</h2>
-                <h3>Professor & Scientist</h3>
-
-                <p>
-                    An expert in interdisciplinary
-                    research with extensive academic
-                    and scientific experience.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-
-            <!-- SPEAKER 8 -->
-            <div class="speaker-card">
-                <img src="images/speaker8.jpg" alt="Speaker 8" class="speaker-image">
-
-                <h2>Dr. Speaker Name 8</h2>
-                <h3>Guest Speaker</h3>
-
-                <p>
-                    Sharing expertise and insights
-                    in emerging research areas
-                    and technological developments.
-                </p>
-
-                <div class="speaker-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fas fa-link"></i></a>
-                </div>
-            </div>
-
+        <!-- PAGE TITLE -->
+        <div class="page-title">
+            <p class="eyebrow">SUMMER SCHOOL 2027</p>
+            <h1>Speakers</h1>
         </div>
 
-    </section>
 
-</main>
+        <!-- SPEAKERS SECTION -->
+        <section class="speakers-section">
+
+            <div class="speakers-container">
 
 
-     <!-- Footer Section -->
+                <!-- SPEAKER 1 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker1.jpg"
+                         alt="Speaker 1"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 1</h2>
+
+                    <h3>Professor & Researcher</h3>
+
+                    <p>
+                        An experienced academician and researcher
+                        with expertise in mathematics and
+                        computational sciences.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_1"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 2 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker2.jpg"
+                         alt="Speaker 2"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 2</h2>
+
+                    <h3>Associate Professor</h3>
+
+                    <p>
+                        An accomplished researcher working
+                        in advanced mathematical modelling
+                        and scientific applications.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_2"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_2"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 3 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker3.jpg"
+                         alt="Speaker 3"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 3</h2>
+
+                    <h3>Research Scientist</h3>
+
+                    <p>
+                        Specializing in emerging technologies,
+                        computational methods and
+                        interdisciplinary research.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_3"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_3"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 4 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker4.jpg"
+                         alt="Speaker 4"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 4</h2>
+
+                    <h3>Professor</h3>
+
+                    <p>
+                        A dedicated academician contributing
+                        to innovative research and
+                        higher education.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_4"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_4"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 5 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker5.jpg"
+                         alt="Speaker 5"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 5</h2>
+
+                    <h3>Assistant Professor</h3>
+
+                    <p>
+                        Engaged in research, teaching
+                        and the development of
+                        innovative scientific approaches.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_5"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_5"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 6 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker6.jpg"
+                         alt="Speaker 6"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 6</h2>
+
+                    <h3>Senior Researcher</h3>
+
+                    <p>
+                        Working on advanced research
+                        methodologies and their
+                        real-world applications.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_6"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_6"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 7 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker7.jpg"
+                         alt="Speaker 7"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 7</h2>
+
+                    <h3>Professor & Scientist</h3>
+
+                    <p>
+                        An expert in interdisciplinary
+                        research with extensive academic
+                        and scientific experience.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_7"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_7"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SPEAKER 8 -->
+                <div class="speaker-card">
+
+                    <img src="images/speaker8.jpg"
+                         alt="Speaker 8"
+                         class="speaker-image">
+
+                    <h2>Dr. Speaker Name 8</h2>
+
+                    <h3>Guest Speaker</h3>
+
+                    <p>
+                        Sharing expertise and insights
+                        in emerging research areas
+                        and technological developments.
+                    </p>
+
+                    <div class="speaker-social">
+
+                        <a href="LINKEDIN_URL_8"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="GOOGLE_SCHOLAR_URL_8"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER SECTION -->
     <footer class="footer">
 
-        <!-- Institution Details -->
+        <!-- INSTITUTION DETAILS -->
         <div>
 
             <h3>SUMMER SCHOOL 2027</h3>
 
             <p>
-                Department of Mathematics, School of Advanced Sciences, 
+                Department of Mathematics, School of Advanced Sciences,
                 <br>
                 VIT University, Vandalur - Kelambakkam Road,
                 <br>
@@ -253,7 +418,8 @@
 
         </div>
 
-        <!-- Quick Links -->
+
+        <!-- QUICK LINKS -->
         <div>
 
             <h4>Quick Links</h4>
@@ -264,7 +430,8 @@
 
         </div>
 
-        <!-- Contact Information -->
+
+        <!-- CONTACT INFORMATION -->
         <div>
 
             <h4>Contact Us</h4>
@@ -277,7 +444,8 @@
 
         </div>
 
-        <!-- Copyright -->
+
+        <!-- COPYRIGHT -->
         <div class="copyright">
 
             © 2027 Vellore Institute of Technology. All rights reserved.
