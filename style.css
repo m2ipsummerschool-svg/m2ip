@@ -11,6 +11,257 @@
 
 
 
+/* =====================================
+   DAILY SESSION SCHEDULE
+===================================== */
+
+.daily-schedule {
+    margin-top: 65px;
+    padding: 35px 25px;
+
+    background: #f5fbfe;
+
+    border: 1px solid #d5eaf5;
+    border-radius: 16px;
+}
+
+
+/* HEADING */
+
+.schedule-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.schedule-eyebrow {
+    color: #55b9e8;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.schedule-heading h2 {
+    color: #163b68;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    margin: 10px 0;
+}
+
+.schedule-heading p {
+    color: #718096;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* SCHEDULE CONTAINER */
+
+.schedule-container {
+    max-width: 950px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+/* INDIVIDUAL SCHEDULE ITEM */
+
+.schedule-item {
+    display: grid;
+
+    grid-template-columns: 155px 1fr;
+
+    align-items: stretch;
+
+    background: #ffffff;
+
+    border: 1px solid #dceaf2;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER EFFECT */
+
+.schedule-item:hover {
+    transform: translateX(5px);
+
+    box-shadow: 0 6px 18px rgba(22,59,104,0.09);
+}
+
+
+/* TIME SECTION */
+
+.schedule-time {
+    background: #163b68;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 17px 10px;
+
+    text-align: center;
+}
+
+.schedule-time span {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.schedule-time small {
+    font-size: 13px;
+    margin-top: 5px;
+
+    color: #cceafa;
+}
+
+
+/* ACTIVITY SECTION */
+
+.schedule-activity {
+    padding: 17px 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.schedule-activity h3 {
+    color: #263d59;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    margin: 5px 0 0;
+}
+
+
+/* LABELS */
+
+.schedule-label {
+    color: #55a9d5;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+
+/* LECTURE */
+
+.schedule-item.lecture {
+    border-left: 4px solid #163b68;
+}
+
+
+/* BREAK */
+
+.schedule-item.break {
+    border-left: 4px solid #55b9e8;
+}
+
+.schedule-item.break .schedule-time {
+    background: #dff3fb;
+    color: #163b68;
+}
+
+.schedule-item.break .schedule-time small {
+    color: #52748d;
+}
+
+.schedule-item.break .schedule-label {
+    color: #3299c9;
+}
+
+
+/* MENTORING */
+
+.schedule-item.mentoring {
+    border-left: 4px solid #398f9f;
+}
+
+.schedule-item.mentoring .schedule-time {
+    background: #246b7c;
+}
+
+.schedule-item.mentoring .schedule-label {
+    color: #398f9f;
+}
+
+
+/* PROJECT WORK */
+
+.schedule-item.project {
+    border-left: 4px solid #55b9e8;
+}
+
+.schedule-item.project .schedule-label {
+    color: #3299c9;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 600px) {
+
+    .daily-schedule {
+        padding: 25px 12px;
+        margin-top: 45px;
+    }
+
+    .schedule-heading h2 {
+        font-size: 24px;
+    }
+
+    .schedule-item {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .schedule-time {
+        padding: 14px 5px;
+    }
+
+    .schedule-time span {
+        font-size: 14px;
+    }
+
+    .schedule-time small {
+        font-size: 12px;
+    }
+
+    .schedule-activity {
+        padding: 13px 12px;
+    }
+
+    .schedule-activity h3 {
+        font-size: 14px;
+    }
+
+    .schedule-label {
+        font-size: 10px;
+    }
+
+}
+
 
 
 
