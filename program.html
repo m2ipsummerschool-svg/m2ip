@@ -4,37 +4,318 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Programme | Summer School 2027</title>
+<title>Programme | Summer School 2027</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =====================================
+   PROGRAMME SECTION
+===================================== */
+
+.programme-section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 35px 20px 75px;
+}
+
+.programme-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.programme-heading h2 {
+    color: #10234f;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.programme-heading p {
+    color: #718096;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   MODULE BUTTONS
+===================================== */
+
+.module-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.module-tab {
+    background: #ffffff;
+    color: #163b68;
+
+    border: 1px solid #d5eaf5;
+    border-radius: 10px;
+
+    padding: 17px 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.module-tab:hover {
+    background: #eaf8fc;
+    border-color: #55b9e8;
+    transform: translateY(-2px);
+}
+
+.module-tab.active {
+    background: #163b68;
+    color: #ffffff;
+    border-color: #163b68;
+
+    box-shadow: 0 5px 15px rgba(22,59,104,0.15);
+}
+
+
+/* =====================================
+   MODULE CONTENT
+===================================== */
+
+.module-content {
+    display: none;
+
+    background: #ffffff;
+
+    border: 1px solid #d5eaf5;
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(20,65,100,0.06);
+
+    animation: moduleFade 0.35s ease;
+}
+
+.module-content.active {
+    display: block;
+}
+
+@keyframes moduleFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* MODULE TITLE */
+
+.module-title {
+    border-left: 5px solid #55b9e8;
+    padding-left: 16px;
+    margin-bottom: 25px;
+}
+
+.module-title span {
+    color: #55b9e8;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.module-title h2 {
+    color: #10234f;
+    font-size: 25px;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+
+/* =====================================
+   SYLLABUS TABLE
+===================================== */
+
+.syllabus-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #d5eaf5;
+    border-radius: 10px;
+}
+
+.syllabus-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.syllabus-table th {
+    background: #163b68;
+    color: #ffffff;
+
+    padding: 14px 10px;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    text-align: center;
+
+    border: 1px solid #d5eaf5;
+}
+
+.syllabus-table th:first-child {
+    width: 85%;
+}
+
+.syllabus-table th:last-child {
+    width: 15%;
+}
+
+.syllabus-table td {
+    border: 1px solid #d5eaf5;
+    padding: 0;
+}
+
+
+/* TOPIC TITLE */
+
+.topic-name {
+    background: #234b78;
+    color: #ffffff;
+
+    padding: 11px 12px;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+
+/* TOPIC DESCRIPTION */
+
+.topic-description {
+    background: #f5fbfe;
+    color: #52677c;
+
+    padding: 14px 12px;
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    text-align: justify;
+}
+
+
+/* LECTURE HOURS */
+
+.hours-cell {
+    background: #e3f5fc;
+    color: #163b68;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .programme-section {
+        padding: 25px 12px 55px;
+    }
+
+    .programme-heading h2 {
+        font-size: 25px;
+    }
+
+    .module-tabs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .module-tab {
+        font-size: 14px;
+        padding: 14px 8px;
+    }
+
+    .module-content {
+        padding: 18px 12px;
+    }
+
+    .module-title h2 {
+        font-size: 21px;
+    }
+
+    .syllabus-table {
+        min-width: 550px;
+    }
+
+    .topic-name {
+        font-size: 14px;
+    }
+
+    .topic-description {
+        font-size: 14px;
+    }
+
+    .hours-cell {
+        font-size: 21px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .module-tabs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
 
-    <!-- Header Section -->
-    <!-- Header Section -->
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
 <header class="site-header">
 
-    <!-- Top Header -->
     <div class="header-top">
 
-        <!-- VIT Logo - Left Side -->
         <div class="vit-logo">
             <img src="blue-vit-logo.png"
                  alt="VIT Chennai Logo">
         </div>
 
-        <!-- Summer School Details - Centre -->
         <div class="brand">
             <strong>SUMMER SCHOOL 2027</strong>
             <small>SAS / Department of Mathematics / VIT Chennai</small>
         </div>
 
-        <!-- M2IP Logo - Right Side -->
         <div class="m2ip-logo">
             <img src="M2IP Logo.png"
                  alt="M2IP Logo">
@@ -42,28 +323,28 @@
 
     </div>
 
-    <!-- Mobile Navigation Button -->
+
     <button class="menu-toggle"
             aria-label="Toggle navigation"
             onclick="document.querySelector('.nav').classList.toggle('open')">
         ☰
     </button>
 
-    <!-- Navigation Bar -->
+
     <nav class="nav">
 
-            <a href="index.html">Home</a>
-            <a href="register.html">Register</a>
-            <a href="speakers.html">Speakers</a>
-            <a href="mentors.html">Mentors</a>
-            <a href="program.html">Program</a>
-            <a href="bookchapters.html">Call for Book Chapters</a>
-            <a href="awards.html">Awards</a>
-            <a href="resources.html">Resources</a>
-            <a href="logistics.html">Logistics</a>
-            <a href="sightseeing.html">Sightseeing</a>
-            <a href="sponsors.html">Sponsors</a>
-            <a href="people.html">People</a>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="speakers.html">Speakers</a>
+        <a href="mentors.html">Mentors</a>
+        <a href="program.html">Program</a>
+        <a href="bookchapters.html">Call for Book Chapters</a>
+        <a href="awards.html">Awards</a>
+        <a href="resources.html">Resources</a>
+        <a href="logistics.html">Logistics</a>
+        <a href="sightseeing.html">Sightseeing</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="people.html">People</a>
 
     </nav>
 
@@ -71,403 +352,520 @@
 
 
 
-    <!-- Main Content -->
-    <main class="inner">
+<!-- =====================================
+     MAIN CONTENT
+===================================== -->
 
-        <!-- Page Title Section -->
-        <div class="page-title">
+<main class="inner">
 
-            <p class="eyebrow">SUMMER SCHOOL 2026</p>
+    <div class="page-title">
 
-            <h1>Programme</h1>
+        <p class="eyebrow">SUMMER SCHOOL 2027</p>
+
+        <h1>Programme</h1>
+
+    </div>
+
+
+    <section class="content-section programme-section">
+
+
+        <div class="programme-heading">
+
+            <h2>Course Modules &amp; Syllabus</h2>
+
+            <p>
+                Explore the six modules and their corresponding
+                topics and lecture hours. Select a module below
+                to view its detailed syllabus.
+            </p>
 
         </div>
 
 
-        
-<!-- PROGRAMME SECTION -->
-<section class="content-section programme-section">
 
-    <div class="programme-heading">
-        <h2>Programme Modules</h2>
+        <!-- =================================
+             MODULE BUTTONS
+        ================================= -->
+
+        <div class="module-tabs">
+
+            <button class="module-tab active"
+                    onclick="showModule(1)">
+                Module 1
+            </button>
+
+            <button class="module-tab"
+                    onclick="showModule(2)">
+                Module 2
+            </button>
+
+            <button class="module-tab"
+                    onclick="showModule(3)">
+                Module 3
+            </button>
+
+            <button class="module-tab"
+                    onclick="showModule(4)">
+                Module 4
+            </button>
+
+            <button class="module-tab"
+                    onclick="showModule(5)">
+                Module 5
+            </button>
+
+            <button class="module-tab"
+                    onclick="showModule(6)">
+                Module 6
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================
+             MODULE 1
+        ================================= -->
+
+        <div class="module-content active" id="module-1">
+
+            <div class="module-title">
+
+                <span>MODULE 1</span>
+
+                <h2>Foundations of Image Segmentation</h2>
+
+            </div>
+
+
+            <div class="syllabus-table-wrapper">
+
+                <table class="syllabus-table">
+
+                    <thead>
+                        <tr>
+                            <th>TOPICS</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="topic-name">
+                                    FOUNDATIONS OF IMAGE SEGMENTATION
+                                </div>
+
+                                <div class="topic-description">
+                                    Introduction to digital image processing,
+                                    image representation and fundamental image
+                                    segmentation techniques, including
+                                    thresholding, edge-based, region-based and
+                                    morphological approaches.
+                                </div>
+                            </td>
+
+                            <td class="hours-cell">06</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MODULE 2
+        ================================= -->
+
+        <div class="module-content" id="module-2">
+
+            <div class="module-title">
+
+                <span>MODULE 2</span>
+
+                <h2>Classical Clustering and Fuzzy-Based Segmentation</h2>
+
+            </div>
+
+
+            <div class="syllabus-table-wrapper">
+
+                <table class="syllabus-table">
+
+                    <thead>
+                        <tr>
+                            <th>TOPICS</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="topic-name">
+                                    CLASSICAL CLUSTERING AND FUZZY-BASED
+                                    SEGMENTATION
+                                </div>
+
+                                <div class="topic-description">
+                                    Fundamentals of clustering and fuzzy set
+                                    theory, mathematical approaches to
+                                    clustering-based segmentation, hard and
+                                    soft clustering methods, and their
+                                    applications in image segmentation.
+                                </div>
+                            </td>
+
+                            <td class="hours-cell">06</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MODULE 3
+        ================================= -->
+
+        <div class="module-content" id="module-3">
+
+            <div class="module-title">
+
+                <span>MODULE 3</span>
+
+                <h2>Transformer Fundamentals for Computer Vision</h2>
+
+            </div>
+
+
+            <div class="syllabus-table-wrapper">
+
+                <table class="syllabus-table">
+
+                    <thead>
+                        <tr>
+                            <th>TOPICS</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="topic-name">
+                                    TRANSFORMER FUNDAMENTALS FOR COMPUTER VISION
+                                </div>
+
+                                <div class="topic-description">
+                                    Introduction to transformer architectures,
+                                    attention mechanisms, positional encoding,
+                                    encoder-decoder frameworks and their
+                                    applications in computer vision.
+                                </div>
+                            </td>
+
+                            <td class="hours-cell">03</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MODULE 4
+        ================================= -->
+
+        <div class="module-content" id="module-4">
+
+            <div class="module-title">
+
+                <span>MODULE 4</span>
+
+                <h2>Deep Learning Foundations for Image Segmentation</h2>
+
+            </div>
+
+
+            <div class="syllabus-table-wrapper">
+
+                <table class="syllabus-table">
+
+                    <thead>
+                        <tr>
+                            <th>TOPICS</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="topic-name">
+                                    DEEP LEARNING FOUNDATIONS FOR IMAGE
+                                    SEGMENTATION
+                                </div>
+
+                                <div class="topic-description">
+                                    Fundamentals of deep learning for image
+                                    segmentation, convolutional feature
+                                    learning, encoder-decoder frameworks,
+                                    semantic segmentation architectures and
+                                    learning-based approaches to image
+                                    segmentation.
+                                </div>
+                            </td>
+
+                            <td class="hours-cell">03</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MODULE 5
+        ================================= -->
+
+        <div class="module-content" id="module-5">
+
+            <div class="module-title">
+
+                <span>MODULE 5</span>
+
+                <h2>Advanced Image Segmentation</h2>
+
+            </div>
+
+
+            <div class="syllabus-table-wrapper">
+
+                <table class="syllabus-table">
+
+                    <thead>
+                        <tr>
+                            <th>TOPICS</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="topic-name">
+                                    ADVANCED IMAGE SEGMENTATION
+                                </div>
+
+                                <div class="topic-description">
+                                    Advanced approaches to image segmentation,
+                                    including attention-based and
+                                    transformer-based methods, foundation
+                                    models, prompt-based segmentation and
+                                    emerging developments in image
+                                    segmentation.
+                                </div>
+                            </td>
+
+                            <td class="hours-cell">06</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MODULE 6
+        ================================= -->
+
+        <div class="module-content" id="module-6">
+
+            <div class="module-title">
+
+                <span>MODULE 6</span>
+
+                <h2>Object Detection and Related Vision Tasks</h2>
+
+            </div>
+
+
+            <div class="syllabus-table-wrapper">
+
+                <table class="syllabus-table">
+
+                    <thead>
+                        <tr>
+                            <th>TOPICS</th>
+                            <th>Hours</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="topic-name">
+                                    OBJECT DETECTION AND RELATED VISION TASKS
+                                </div>
+
+                                <div class="topic-description">
+                                    Fundamentals of object detection,
+                                    object localisation, bounding box
+                                    prediction, detection architectures,
+                                    evaluation measures and their
+                                    applications in computer vision.
+                                </div>
+                            </td>
+
+                            <td class="hours-cell">03</td>
+
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    <div>
+
+        <h3>SUMMER SCHOOL 2027</h3>
+
         <p>
-            Explore the six modules and their corresponding
-            topics and lecture hours.
+            Department of Mathematics, School of Advanced Sciences,
+            <br>
+            VIT University, Vandalur - Kelambakkam Road,
+            <br>
+            Chennai, Tamil Nadu, 600 127,
+            <br>
+            India.
         </p>
-    </div>
-
-    <!-- MODULE NAVIGATION -->
-    <div class="module-tabs">
-
-        <button class="module-tab active" onclick="showModule(1)">
-            Module 1
-        </button>
-
-        <button class="module-tab" onclick="showModule(2)">
-            Module 2
-        </button>
-
-        <button class="module-tab" onclick="showModule(3)">
-            Module 3
-        </button>
-
-        <button class="module-tab" onclick="showModule(4)">
-            Module 4
-        </button>
-
-        <button class="module-tab" onclick="showModule(5)">
-            Module 5
-        </button>
-
-        <button class="module-tab" onclick="showModule(6)">
-            Module 6
-        </button>
 
     </div>
 
 
-    <!-- MODULE 1 -->
-    <div class="module-content active" id="module-1">
+    <div>
 
-        <div class="module-title">
-            <span>MODULE 1</span>
-            <h2>Foundations of Image Segmentation</h2>
-        </div>
+        <h4>Quick Links</h4>
 
-        <div class="syllabus-table-wrapper">
-
-            <table class="syllabus-table">
-
-                <thead>
-                    <tr>
-                        <th>TOPICS</th>
-                        <th class="hours-heading">Hours</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>
-
-                            <div class="topic-name">
-                                FOUNDATIONS OF IMAGE SEGMENTATION
-                            </div>
-
-                            <div class="topic-description">
-                                Introduction to digital image processing,
-                                image representation and fundamental image
-                                segmentation techniques, including
-                                thresholding, edge-based, region-based and
-                                morphological approaches.
-                            </div>
-
-                        </td>
-
-                        <td class="hours-cell">
-                            06
-                        </td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
+        <a href="register.html">Registration</a>
+        <a href="program.html">Programme</a>
+        <a href="speakers.html">Speakers</a>
 
     </div>
 
 
-    <!-- MODULE 2 -->
-    <div class="module-content" id="module-2">
+    <div>
 
-        <div class="module-title">
-            <span>MODULE 2</span>
-            <h2>Module 2 Title</h2>
-        </div>
+        <h4>Contact Us</h4>
 
-        <div class="syllabus-table-wrapper">
-
-            <table class="syllabus-table">
-
-                <thead>
-                    <tr>
-                        <th>TOPICS</th>
-                        <th class="hours-heading">Hours</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="topic-name">
-                                TOPIC TITLE
-                            </div>
-                            <div class="topic-description">
-                                Add the syllabus description for Module 2 here.
-                            </div>
-                        </td>
-
-                        <td class="hours-cell">00</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </div>
+        <p>
+            Email: m2ipsummerschool@gmail.com
+            <br>
+            Phone: +91 87780 97050
+        </p>
 
     </div>
 
 
-    <!-- MODULE 3 -->
-    <div class="module-content" id="module-3">
+    <div class="copyright">
 
-        <div class="module-title">
-            <span>MODULE 3</span>
-            <h2>Module 3 Title</h2>
-        </div>
-
-        <div class="syllabus-table-wrapper">
-
-            <table class="syllabus-table">
-
-                <thead>
-                    <tr>
-                        <th>TOPICS</th>
-                        <th class="hours-heading">Hours</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="topic-name">
-                                TOPIC TITLE
-                            </div>
-                            <div class="topic-description">
-                                Add the syllabus description for Module 3 here.
-                            </div>
-                        </td>
-
-                        <td class="hours-cell">00</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </div>
+        © 2027 Vellore Institute of Technology.
+        All rights reserved.
 
     </div>
 
-
-    <!-- MODULE 4 -->
-    <div class="module-content" id="module-4">
-
-        <div class="module-title">
-            <span>MODULE 4</span>
-            <h2>Module 4 Title</h2>
-        </div>
-
-        <div class="syllabus-table-wrapper">
-
-            <table class="syllabus-table">
-
-                <thead>
-                    <tr>
-                        <th>TOPICS</th>
-                        <th class="hours-heading">Hours</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="topic-name">
-                                TOPIC TITLE
-                            </div>
-                            <div class="topic-description">
-                                Add the syllabus description for Module 4 here.
-                            </div>
-                        </td>
-
-                        <td class="hours-cell">00</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </div>
+</footer>
 
 
-    <!-- MODULE 5 -->
-    <div class="module-content" id="module-5">
 
-        <div class="module-title">
-            <span>MODULE 5</span>
-            <h2>Module 5 Title</h2>
-        </div>
+<!-- =====================================
+     MODULE SWITCHING JAVASCRIPT
+===================================== -->
 
-        <div class="syllabus-table-wrapper">
-
-            <table class="syllabus-table">
-
-                <thead>
-                    <tr>
-                        <th>TOPICS</th>
-                        <th class="hours-heading">Hours</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="topic-name">
-                                TOPIC TITLE
-                            </div>
-                            <div class="topic-description">
-                                Add the syllabus description for Module 5 here.
-                            </div>
-                        </td>
-
-                        <td class="hours-cell">00</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </div>
-
-
-    <!-- MODULE 6 -->
-    <div class="module-content" id="module-6">
-
-        <div class="module-title">
-            <span>MODULE 6</span>
-            <h2>Module 6 Title</h2>
-        </div>
-
-        <div class="syllabus-table-wrapper">
-
-            <table class="syllabus-table">
-
-                <thead>
-                    <tr>
-                        <th>TOPICS</th>
-                        <th class="hours-heading">Hours</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="topic-name">
-                                TOPIC TITLE
-                            </div>
-                            <div class="topic-description">
-                                Add the syllabus description for Module 6 here.
-                            </div>
-                        </td>
-
-                        <td class="hours-cell">00</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- MODULE SWITCHING SCRIPT -->
 <script>
 
 function showModule(moduleNumber) {
 
     // Hide all module contents
-    document.querySelectorAll('.module-content').forEach(function(content) {
-        content.classList.remove('active');
+
+    const modules = document.querySelectorAll('.module-content');
+
+    modules.forEach(function(module) {
+        module.classList.remove('active');
     });
 
-    // Remove active status from all buttons
-    document.querySelectorAll('.module-tab').forEach(function(button) {
+
+    // Remove active class from all buttons
+
+    const buttons = document.querySelectorAll('.module-tab');
+
+    buttons.forEach(function(button) {
         button.classList.remove('active');
     });
 
-    // Show selected module
+
+    // Display selected module
+
     document.getElementById('module-' + moduleNumber)
         .classList.add('active');
 
+
     // Highlight selected button
-    document.querySelectorAll('.module-tab')[moduleNumber - 1]
-        .classList.add('active');
+
+    buttons[moduleNumber - 1].classList.add('active');
 
 }
 
 </script>
 
-    </main>
-
-
-    <!-- Footer Section -->
-    <footer class="footer">
-
-        <!-- Institution Details -->
-        <div>
-
-            <h3>SUMMER SCHOOL 2027</h3>
-
-            <p>
-                Department of Mathematics, School of Advanced Sciences, 
-                <br>
-                VIT University, Vandalur - Kelambakkam Road,
-                <br>
-                Chennai, Tamil Nadu, 600 127,
-                <br>
-                India.
-            </p>
-
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-
-            <h4>Quick Links</h4>
-
-            <a href="register.html">Registration</a>
-            <a href="program.html">Programme</a>
-            <a href="speakers.html">Speakers</a>
-
-        </div>
-
-        <!-- Contact Information -->
-        <div>
-
-            <h4>Contact Us</h4>
-
-            <p>
-                Email: m2ipsummerschool@gmail.com
-                <br>
-                Phone: +91 87780 97050
-            </p>
-
-        </div>
-
-        <!-- Copyright -->
-        <div class="copyright">
-
-            © 2027 Vellore Institute of Technology. All rights reserved.
-
-        </div>
-
-    </footer>
 
 </body>
-
 </html>
