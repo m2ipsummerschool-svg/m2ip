@@ -11,9 +11,11 @@
 
 
 
-/* =========================================
-   M2IP 2027 SPONSORS PAGE
-========================================= */
+
+/* =====================================================
+   M2IP 2027 - SPONSORS PAGE
+   Complete CSS
+===================================================== */
 
 .sponsors-page {
     max-width: 1200px;
@@ -23,10 +25,18 @@
     color: #263d56;
 }
 
-/* HERO */
+
+/* =====================================================
+   1. PARTNERSHIP HERO SECTION
+===================================================== */
 
 .partner-hero {
-    background: linear-gradient(125deg, #10234f, #163b68, #28618d);
+    background: linear-gradient(
+        125deg,
+        #10234f,
+        #163b68,
+        #28618d
+    );
     padding: 65px 55px;
     border-radius: 20px;
     color: white;
@@ -117,7 +127,9 @@
 }
 
 
-/* KEY MESSAGE */
+/* =====================================================
+   2. KEY MESSAGE
+===================================================== */
 
 .partner-message {
     display: flex;
@@ -144,7 +156,9 @@
 }
 
 
-/* COMMON SECTION */
+/* =====================================================
+   3. COMMON SECTION STYLING
+===================================================== */
 
 .partner-section {
     padding: 60px 0 15px;
@@ -177,7 +191,9 @@
 }
 
 
-/* SUPPORT CARDS */
+/* =====================================================
+   4. WHAT YOUR SPONSORSHIP SUPPORTS
+===================================================== */
 
 .sponsorship-support-grid {
     display: grid;
@@ -228,7 +244,9 @@
 }
 
 
-/* WHY PARTNER */
+/* =====================================================
+   5. WHY PARTNER WITH US
+===================================================== */
 
 .why-partner-section {
     margin-top: 30px;
@@ -285,7 +303,9 @@
 }
 
 
-/* SPONSORSHIP TIERS */
+/* =====================================================
+   6. SPONSORSHIP OPPORTUNITIES
+===================================================== */
 
 .sponsorship-section {
     padding-top: 70px;
@@ -314,9 +334,48 @@
     box-shadow: 0 14px 28px rgba(22,59,104,0.13);
 }
 
+
+/* =====================================================
+   7. SPONSOR BADGE IMAGES
+===================================================== */
+
+/* Common badge container for all three tiers */
+
+.tier-medal {
+    width: 150px;
+    height: 150px;
+    margin: 22px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Badge image */
+
+.tier-medal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+
+.sponsor-tier:hover .tier-medal img {
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   8. GOLD, SILVER AND SUPPORTING PARTNER CARDS
+===================================================== */
+
 .tier-top {
     padding: 32px 20px 25px;
 }
+
+/* Top border colours */
 
 .gold-tier {
     border-top: 5px solid #d6a437;
@@ -329,6 +388,9 @@
 .supporting-tier {
     border-top: 5px solid #55b9e8;
 }
+
+
+/* Partnership labels */
 
 .tier-badge {
     display: inline-block;
@@ -356,16 +418,17 @@
     color: #176b9e;
 }
 
-.tier-medal {
-    font-size: 36px;
-    margin: 20px 0 10px;
-}
+
+/* Partner names */
 
 .tier-top h3 {
     color: #163b68;
     font-size: 23px;
     margin: 0 0 12px;
 }
+
+
+/* Sponsorship amounts */
 
 .tier-price {
     color: #163b68;
@@ -379,6 +442,9 @@
     font-size: 13px;
     margin: 0;
 }
+
+
+/* Sponsorship buttons */
 
 .tier-button {
     display: block;
@@ -412,7 +478,9 @@
 }
 
 
-/* BENEFITS TABLE */
+/* =====================================================
+   9. SPONSORSHIP BENEFITS COMPARISON TABLE
+===================================================== */
 
 .benefits-table-wrapper {
     overflow-x: auto;
@@ -500,6 +568,9 @@
     font-size: 12px;
 }
 
+
+/* Sponsorship note */
+
 .sponsorship-note {
     margin-top: 16px;
     color: #718096;
@@ -508,13 +579,19 @@
 }
 
 
-/* CONTACT */
+/* =====================================================
+   10. PARTNERSHIP CONTACT SECTION
+===================================================== */
 
 .partner-contact {
     margin-top: 65px;
     padding: 45px;
     border-radius: 18px;
-    background: linear-gradient(120deg, #eaf8fc, #f5fbfe);
+    background: linear-gradient(
+        120deg,
+        #eaf8fc,
+        #f5fbfe
+    );
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 35px;
@@ -586,6 +663,10 @@
     overflow-wrap: anywhere;
 }
 
+.partner-email a:hover {
+    text-decoration: underline;
+}
+
 .partner-contact-button {
     display: block;
     text-align: center;
@@ -606,7 +687,9 @@
 }
 
 
-/* RESPONSIVE */
+/* =====================================================
+   11. RESPONSIVE DESIGN - TABLETS
+===================================================== */
 
 @media (max-width: 950px) {
 
@@ -621,13 +704,25 @@
     .tier-price {
         font-size: 25px;
     }
+
+    .tier-medal {
+        width: 135px;
+        height: 135px;
+    }
 }
+
+
+/* =====================================================
+   12. RESPONSIVE DESIGN - MOBILE
+===================================================== */
 
 @media (max-width: 700px) {
 
     .sponsors-page {
         padding: 20px 15px 40px;
     }
+
+    /* Hero */
 
     .partner-hero {
         padding: 40px 23px;
@@ -641,6 +736,13 @@
         font-size: 18px;
     }
 
+    .partner-event-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Key message */
+
     .partner-message {
         padding: 20px;
         align-items: flex-start;
@@ -650,6 +752,8 @@
         font-size: 15px;
     }
 
+    /* Common sections */
+
     .partner-section {
         padding-top: 45px;
     }
@@ -658,7 +762,14 @@
         font-size: 25px;
     }
 
-    .sponsorship-support-grid,
+    /* Support cards */
+
+    .sponsorship-support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Why partner */
+
     .why-partner-grid {
         grid-template-columns: 1fr;
     }
@@ -667,15 +778,40 @@
         padding: 40px 18px;
     }
 
+    /* Sponsorship cards */
+
     .sponsorship-tiers {
         grid-template-columns: 1fr;
         max-width: 430px;
         margin: 30px auto;
+        gap: 22px;
     }
 
     .tier-top {
         padding: 25px 20px;
     }
+
+    .tier-medal {
+        width: 130px;
+        height: 130px;
+        margin: 18px auto;
+    }
+
+    .tier-price {
+        font-size: 30px;
+    }
+
+    /* Benefits table */
+
+    .benefits-table-wrapper {
+        border-radius: 10px;
+    }
+
+    .benefits-table {
+        min-width: 750px;
+    }
+
+    /* Contact */
 
     .partner-contact {
         grid-template-columns: 1fr;
@@ -688,6 +824,47 @@
 
     .partner-contact-card {
         padding: 23px;
+    }
+}
+
+
+/* =====================================================
+   13. SMALL MOBILE SCREENS
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .partner-hero {
+        padding: 32px 18px;
+    }
+
+    .partner-hero h1 {
+        font-size: 27px;
+    }
+
+    .partner-hero h2 {
+        font-size: 16px;
+    }
+
+    .partner-label {
+        font-size: 10px;
+    }
+
+    .tier-medal {
+        width: 115px;
+        height: 115px;
+    }
+
+    .tier-top h3 {
+        font-size: 21px;
+    }
+
+    .tier-price {
+        font-size: 27px;
+    }
+
+    .why-partner-card {
+        padding: 18px;
     }
 }
 
