@@ -1273,11 +1273,11 @@
 
 /* Individual speaker image positioning */
 
-.speaker-card:nth-child(2) .speaker-image {
+.speaker-card:nth-child(1) .speaker-image {
     object-position: center 15%;
 }
 
-.speaker-card:nth-child(9) .speaker-image {
+.speaker-card:nth-child(8) .speaker-image {
     object-position: center 15%;
 }
 /* =====================================
