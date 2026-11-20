@@ -9,6 +9,74 @@
 
 
 
+/* =====================================
+   SELECTED PARTICIPANTS MARQUEE
+===================================== */
+
+.selected-marquee {
+    width: 100%;
+    overflow: hidden;
+
+    background: #fff1f1;
+    border-top: 1px solid #f5caca;
+    border-bottom: 1px solid #f5caca;
+
+    padding: 13px 0;
+}
+
+.selected-track {
+    display: flex;
+    width: max-content;
+
+    animation: selectedScroll 22s linear infinite;
+}
+
+.selected-track span {
+    flex-shrink: 0;
+
+    padding-right: 100px;
+
+    color: #c62828;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* LEFT TO RIGHT SCROLLING */
+
+@keyframes selectedScroll {
+
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+
+/* PAUSE WHEN HOVERED */
+
+.selected-marquee:hover .selected-track {
+    animation-play-state: paused;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .selected-track span {
+        font-size: 14px;
+    }
+
+}
+
 
 /* =====================================
    NEXT AND PREVIOUS PAGE NAVIGATION
