@@ -471,6 +471,45 @@
 }
 
 
+/* SPEAKER CARD HOVER EFFECT */
+
+.speaker-card {
+    background: #ffffff;
+    transition: background 0.4s ease,
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+/* Change background when hovering */
+
+.speaker-card:hover {
+    background: #dff6ff;
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 80, 130, 0.15);
+}
+
+/* Smooth image transition */
+
+.speaker-image {
+    transition: transform 0.4s ease;
+}
+
+.speaker-card:hover .speaker-image {
+    transform: translateX(-50%) scale(1.04);
+}
+
+/* Social icons hover */
+
+.speaker-social a {
+    transition: color 0.3s ease;
+}
+
+.speaker-card:hover .speaker-social a {
+    color: #399bcf;
+}
+
 
 /* =========================================
    SDG LOGOS - UNIFORM SIZE
